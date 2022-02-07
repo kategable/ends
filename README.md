@@ -1,8 +1,17 @@
 
 
-# Ends
+# Ends Readme
 
 This project was generated using [Nx](https://nx.dev).
+It containes an API and an ANGULAR APP
+## To Run API
+From API folder - `nx serve`
+or from root - `nx run api:serve`
+
+## To Run App
+From root - `nx serve`
+
+## To learn more scroll down 
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
