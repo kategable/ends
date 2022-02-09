@@ -10,7 +10,8 @@
         "outputPath": "dist/apps/shopify-ends-api",
         "main": "apps/shopify-ends-api/src/main.ts",
         "tsConfig": "apps/shopify-ends-api/tsconfig.app.json",
-        "assets": ["apps/shopify-ends-api/src/assets"]
+        "assets": ["apps/shopify-ends-api/src/assets"],
+        "proxyConfig": "apps/shopify-ends-app/proxy.conf.json"
       },
       "configurations": {
         "production": {
