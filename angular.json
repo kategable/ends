@@ -5,6 +5,7 @@
     "api-interfaces": "libs/api-interfaces",
     "calculator-app": "apps/calculator-app",
     "calculator-app-e2e": "apps/calculator-app-e2e",
+    "shopify-ends-api": "apps/shopify-ends-api",
     "shopify-ends-app": "apps/shopify-ends-app",
     "shopify-ends-app-e2e": "apps/shopify-ends-app-e2e"
   }
