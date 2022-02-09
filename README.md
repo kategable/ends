@@ -11,6 +11,11 @@ or from root - `nx run api:serve`
 ## To Run App
 From root - `nx serve`
 
+## To build React App
+`nx build shopify-ends-app`
+
+## To run React App
+build and `npx http-server dist/apps/shopify-ends-app`
 ## To learn more scroll down 
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
