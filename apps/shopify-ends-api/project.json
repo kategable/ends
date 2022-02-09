@@ -1,0 +1,53 @@
+{
+  "root": "apps/shopify-ends-api",
+  "sourceRoot": "apps/shopify-ends-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/shopify-ends-api",
+        "main": "apps/shopify-ends-api/src/main.ts",
+        "tsConfig": "apps/shopify-ends-api/tsconfig.app.json",
+        "assets": ["apps/shopify-ends-api/src/assets"],
+        "proxyConfig": "apps/shopify-ends-app/proxy.conf.json"
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/shopify-ends-api/src/environments/environment.ts",
+              "with": "apps/shopify-ends-api/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:execute",
+      "options": {
+        "buildTarget": "shopify-ends-api:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/shopify-ends-api/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/shopify-ends-api"],
+      "options": {
+        "jestConfig": "apps/shopify-ends-api/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
