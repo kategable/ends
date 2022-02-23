@@ -1,6 +1,6 @@
-import { Controller, Get, Param, Req } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Req } from '@nestjs/common';
 
-import { Message } from '@ends/api-interfaces';
+import { CartRequest, Message } from '@ends/api-interfaces';
 
 import { AppService } from './app.service';
 
@@ -13,17 +13,15 @@ export class AppController {
     return this.appService.getData();
   }
 
-  @Get('tax/:code/:zipCode/:productSku')
-  //http://localhost:3333/api/tax/123/60032/asdasd
-  getTax(@Param() code: string, @Param() zipCode:number, @Param() productSku: string): number {
-    console.log({code}, {zipCode}, {productSku});
 
-    return 15.99;
+
+  @Post("calculate")
+  calculate(@Body() cartRequest: CartRequest) {
+    return this.appService.culculate(cartRequest);
   }
 
-  @Get(':id')
-  findOne(@Param() params): string {
-    console.log(params.id);
-    return `This action returns a #${params.id}`;
+  @Post("save")
+  saveOrder(@Body() cartRequest: CartRequest) {
+    return this.appService.saveOrder(cartRequest);
   }
 }
