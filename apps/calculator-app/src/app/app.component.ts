@@ -8,6 +8,7 @@ import { Message } from '@ends/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
+  url = "http://localhost:3333"
+  hello$ = this.http.get<Message>(`${this.url}/api/hello`);
   constructor(private http: HttpClient) {}
 }

@@ -25,6 +25,7 @@ async function bootstrap() {
   .setVersion('1.0')
   .addTag('ends-tax')
   .build();
+  app.enableCors({origin: 'http://localhost:4200'});;
 const document = SwaggerModule.createDocument(app, config);
 SwaggerModule.setup('api', app, document);
 
