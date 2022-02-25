@@ -4,14 +4,16 @@ export interface Message {
   message: string;
 }
 
-export class CartRequest  {
+export class CartRequest {
   @ApiProperty({
     example: 'adasd-asd-asd-asd',
     description: 'Registered ShopId',
   })
   shopId: string;
   @ApiProperty({
-    example: { product: '123', price: 12.99, quanity:1 } as Cart,
+    example: {
+      products: [{ product: '123', price: 12.99, quanity: 1 }],
+    } as Cart,
     description: 'Cart details',
   })
   cart: Cart;
@@ -23,10 +25,13 @@ export class CartRequest  {
   @ApiProperty()
   total: number;
 }
-export interface Cart {
+export interface Product {
   product: string;
   price: number;
   quanity: number;
+}
+export interface Cart {
+  products: Product[];
 }
 export interface Shipping {
   addressLine1: string;
