@@ -9,5 +9,6 @@ import { Message } from '@ends/api-interfaces';
 })
 export class AppComponent {
   hello$ = this.http.get<Message>('/api/hello');
+  products$ = this.http.get<any[]>('api/products')
   constructor(private http: HttpClient) {}
 }
