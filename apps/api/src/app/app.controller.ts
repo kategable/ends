@@ -3,7 +3,7 @@ import { Body, Controller, Get, Param, Post, Req } from '@nestjs/common';
 import { CartRequest, Message } from '@ends/api-interfaces';
 
 import { AppService } from './app.service';
-import { ApiBody,ApiOperation } from '@nestjs/swagger';
+import { ApiBody } from '@nestjs/swagger';
 
 @Controller()
 export class AppController {
@@ -22,5 +22,9 @@ export class AppController {
   @Post("save")
   saveOrder(@Body() cartRequest: CartRequest) {
     return this.appService.saveOrder(cartRequest);
+  }
+  @Get('products')
+  getProducts(): any {
+    return this.appService.getProducts();
   }
 }

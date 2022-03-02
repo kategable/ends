@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "strictPropertyInitialization": false,
+    "strictPropertyInitialization":false,
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ends/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@ends/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@ends/data/sanity": ["libs/data/sanity/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

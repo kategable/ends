@@ -4,6 +4,7 @@
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
     "calculator-app": "apps/calculator-app",
-    "calculator-app-e2e": "apps/calculator-app-e2e"
+    "calculator-app-e2e": "apps/calculator-app-e2e",
+    "data-sanity": "libs/data/sanity"
   }
 }
