@@ -1,25 +1,18 @@
 // src/app/service/sanity.service.ts
 
 import { Injectable } from '@angular/core';
-import sanityClient from '@sanity/client';
+import { client } from './client';
 
 
-const  YOUR_PROJECT_ID= "kmjcfpvs";
 @Injectable({
   providedIn: 'root'
 })
 export class SanityService {
 
-  sanityClientCredentials = {
-    option: sanityClient({
-      projectId: YOUR_PROJECT_ID,
-      dataset: "production"
-    })
-  }
-
+  sanityClientCredentials = client;
 
   async getProducts(): Promise<any[]> {
-    return await this.sanityClientCredentials.option.fetch(
+    return await this.sanityClientCredentials.fetch(
       `*[_type == "product"]{
         _id,
     title
@@ -28,7 +21,7 @@ export class SanityService {
   }
 
   async getCategories(): Promise<any[]> {
-    return await this.sanityClientCredentials.option.fetch(
+    return await this.sanityClientCredentials.fetch(
       `*[_type == "category"]{
         _id,
         title,

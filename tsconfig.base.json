@@ -3,7 +3,7 @@
   "compilerOptions": {
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "strictPropertyInitialization":false,
+    "strictPropertyInitialization": false,
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,

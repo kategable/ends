@@ -24,8 +24,8 @@ export class AppController {
     return this.appService.saveOrder(cartRequest);
   }
   @Get('products')
-  getProducts(): any {
-    return this.appService.getProducts();
+  async getProducts() {
+     return await this.appService.getProducts();
   }
 
 

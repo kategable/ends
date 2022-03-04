@@ -1,2 +1,1 @@
-export * from './lib/data-sanity';
-export * from './lib/service/sanity.service'
+export * from '../../../../apps/api/src/app/service/sanity.service'
