@@ -9,7 +9,9 @@ import category from './category';
 import product from './product';
 import vendor from './vendor';
 import productVariant from './productVariant';
+import productEndsVariant from './productEndsVariant';
 import city from './city';
+import calculation from './calculation';
 
 import localeString from './locale/String';
 import localeText from './locale/Text';
@@ -34,6 +36,7 @@ export default createSchema({
     localeBlockContent,
     localeString,
     productVariant,
-    city
+    city,
+    calculation
   ]),
 });

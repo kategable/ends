@@ -14,6 +14,11 @@ export default {
       type: 'number',
     },
     {
+      title: 'Weight in fluid ml',
+      name: 'mls',
+      type: 'number',
+    },
+    {
       title: 'Price',
       name: 'price',
       type: 'number',
@@ -26,6 +31,11 @@ export default {
     {
       title: 'Taxable',
       name: 'taxable',
+      type: 'boolean',
+    },
+    {
+      title: 'ENDS Taxable',
+      name: 'isEedsTaxable',
       type: 'boolean',
     },
     {
