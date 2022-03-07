@@ -1,21 +1,20 @@
 import { Injectable } from '@nestjs/common';
 import { CartRequest, Message } from '@ends/api-interfaces';
-
-import * as cities from '../assets/data/USCities.json';
+import { TaxService } from './tax.service';
 // This import style requires "esModuleInterop", see "side notes"
 @Injectable()
 export class AppService {
-  // constructor(private readonly dataService: SanityService) {}
+  // constructor(private readonly dataService: SanityDataService) {}
+  constructor(private readonly taxService: TaxService) {}
+  //constructor(private readonly taxService: TaxService,private readonly dataService: SanityDataService) {}
   saveOrder(cartRequest: CartRequest): number {
     console.log('order saved', cartRequest);
     return 123;
   }
-  culculate(cartRequest: CartRequest): any {
-    console.log('tax calculated', cities);
-    const cityCollection: any[] = cities as any[];
-
-    const found = cityCollection.find(c=>c.zip_code === cartRequest.shipping.zipCode && c.state === cartRequest.shipping.zipCode);
-    return found;
+  culculate(cartRequest: CartRequest): number{
+    console.log('cartRequest', cartRequest);
+    const tax = this.taxService.culculate(cartRequest);
+    return tax;
   }
   getData(): Message {
     return { message: 'Welcome to api!' };

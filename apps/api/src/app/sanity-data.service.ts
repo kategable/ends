@@ -1,16 +1,11 @@
-import { Injectable } from '@angular/core';
-import { client } from './service/client';
-import { SanityService } from './service/sanity.service';
 
-@Injectable({
-  providedIn: 'root',
-})
+import { Injectable } from '@nestjs/common';
+import { client } from './service/client';
+
+@Injectable()
 export class SanityDataService {
   sanityClientCredentials = client;
 
-  constructor(private readonly service: SanityService) {
-
-  }
   async getProducts() {
     return await this.sanityClientCredentials.fetch(
       `*[_type == "product"]{

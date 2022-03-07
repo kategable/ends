@@ -1,0 +1,65 @@
+[
+  {
+    "_createdAt": "2022-03-04T21:48:24Z",
+    "_id": "11fdfaa4-7874-4304-9d97-42d513f1eec9",
+    "_rev": "P2xs1IiT75sLhipLc41noL",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:48:24Z",
+    "state": "Alabama"
+  },
+  {
+    "WholesaleRate": 55,
+    "_createdAt": "2022-03-04T21:49:06Z",
+    "_id": "1e0618aa-3834-4c1d-9ed7-6831e04f48c4",
+    "_rev": "caobftxRaOyN7ObSyN7HMm",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:51:48Z",
+    "city": "Anchorage",
+    "hasTax": true,
+    "hasWholesaleRate": true,
+    "state": "Alaska"
+  },
+  {
+    "_createdAt": "2022-03-04T21:48:48Z",
+    "_id": "63bd1aa8-4e90-4620-8b03-d0752916d854",
+    "_rev": "caobftxRaOyN7ObSyN6jgd",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:48:48Z",
+    "state": "Alaska"
+  },
+  {
+    "_createdAt": "2022-03-04T21:54:08Z",
+    "_id": "6456884b-7604-4076-8678-4694b999d3e0",
+    "_rev": "IMEhL00nuGQl52jj08ZcIG",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T22:14:26Z",
+    "state": "Colorado"
+  },
+  {
+    "WholesaleRate": 56.93,
+    "_createdAt": "2022-03-04T21:52:53Z",
+    "_id": "a4360ffd-a694-4741-bb1e-9518aed6c08d",
+    "_rev": "P2xs1IiT75sLhipLc42eyT",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:52:53Z",
+    "hasTax": true,
+    "hasWholesaleRate": true,
+    "state": "California"
+  },
+  {
+    "_createdAt": "2022-03-04T21:52:14Z",
+    "_id": "d23f34c8-1aef-428c-9f9a-02cbe03416f0",
+    "_rev": "caobftxRaOyN7ObSyN7KxJ",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:52:14Z",
+    "state": "Arizona"
+  },
+  {
+    "_createdAt": "2022-03-04T21:52:27Z",
+    "_id": "e8e02430-7aab-4825-80a7-17bf3554166f",
+    "_rev": "P2xs1IiT75sLhipLc42bq5",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:52:27Z",
+    "state": "Arkansas"
+  }
+]
