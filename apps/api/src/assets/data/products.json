@@ -1,0 +1,1943 @@
+[
+  {
+    "_createdAt": "2018-04-25T10:59:19Z",
+    "_id": "227bbb74-5656-4376-80b3-7424bddc5001",
+    "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
+    "_type": "product",
+    "_updatedAt": "2022-02-25T12:27:17Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "One of the most fun Kracie kits to make!"
+    },
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "a94b78f6db46",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a94b78f6db460",
+              "_type": "span",
+              "marks": [],
+              "text": "DIY set Happy Kitchen for making Fast Food candy, with 2 cheeseburgers, French Fries and a drink. Everything is included to make two mini hamburgers, fries, and a drink. All you need is a bit of water and a microwave. The instructions are on the back of the pack in Japanese but just follow the pictures and have fun! Challenge yourself today!   "
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "9920b1ffc97d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "9920b1ffc97d0",
+              "_type": "span",
+              "marks": [],
+              "text": "Popin' Cookin' is a series of edible DIY candy in funny shapes, that you can easily make yourself by adding water to the ingredients of the package"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "6ca8c9308700",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "6ca8c93087000",
+              "_type": "span",
+              "marks": [],
+              "text": "Contents: 6x bags of powder with different candy ingredients, 1x spoon, 1x knife, 1x cup, 1x mold."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "5dc7214683df",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "5dc7214683df0",
+              "_type": "span",
+              "marks": [],
+              "text": "Size of the box: width: 14.5cm (5.7\"), height: 13cm (5.1\"), depth: 4.5cm (1.7\"), incl. instructions with pictures (see also instruction video below), mold can of course be reused."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "0acb09f21489",
+        "_ref": "1ba26a25-7f35-4d24-804e-09cc76a0cd73",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "barcode": {
+        "_type": "barcode",
+        "barcode": "4901551354283",
+        "format": "EAN13"
+      },
+      "images": [
+        {
+          "_key": "ly68v3mo",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-76b6b872f92555bcb67d9a2551c75b28e0d90b2e-600x500-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "price": 9.99
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "happy-kitchen-hamburger"
+    },
+    "tags": [
+      "DIY"
+    ],
+    "title": "Happy Kitchen - Hamburger",
+    "vendor": {
+      "_ref": "01ca40b6-e7fd-4676-af25-33f591de51c0",
+      "_type": "reference"
+    }
+  },
+  {
+    "_createdAt": "2018-04-25T11:06:02Z",
+    "_id": "35f78f0b-8938-412d-aae0-80937ee4a744",
+    "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
+    "_type": "product",
+    "_updatedAt": "2022-02-25T12:27:17Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "The green ear bears you need"
+    },
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "1a3cb9d9f38a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "1a3cb9d9f38a0",
+              "_type": "span",
+              "marks": [],
+              "text": "The green ear stands for irresistibly delicious vegetarian-pleasure without animal gelatin. Fruit gummies in bear face form."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "b02c05af1d5a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "b02c05af1d5a0",
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "2ea5422de4fe",
+        "_ref": "55a74606-ad5b-4e09-8d4b-e3b06c24912c",
+        "_type": "reference"
+      },
+      {
+        "_key": "b93500456acf",
+        "_ref": "fb3cf5de-4dd0-4094-864e-5745d518ef65",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "grams": 200,
+      "images": [
+        {
+          "_key": "4Er1ICL2",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-40e5221d61bf4868ab175fcadfc0ea346d7d8283-1000x1000-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "crojMUr0",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-94b4d20bd913b68723f558bd7ccbaeaaa56b5492-185x167-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "2kZ6eon0",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-65d213e5a3d98be5ab35dd60b650a18ebe31dc75-800x585-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "RjlQTRvs",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-13441e6bb8fe47bc918f539705a2f9ec7cee6c2b-640x436-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "price": 19.99
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "katjes-gruen-ohr-baerchen-gummies"
+    },
+    "title": "Katjes Grün-Ohr Bärchen Gummies",
+    "vendor": {
+      "_ref": "6300eff8-5019-4308-b5d6-3f71f45fb3ef",
+      "_type": "reference"
+    }
+  },
+  {
+    "_createdAt": "2018-04-25T11:15:02Z",
+    "_id": "8a4337ae-4ec8-431f-8890-9e0b0192331a",
+    "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
+    "_type": "product",
+    "_updatedAt": "2022-02-25T12:27:17Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "Stringy licorice candy. Party favourite!"
+    },
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "c70ec97e834b",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "c70ec97e834b0",
+              "_type": "span",
+              "marks": [],
+              "text": "Creative candy! Not only do great tasting, but also perfect for birthdays and competitions to finish them first or as a roping for gingerbread pirate ships!"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "43ac10978820",
+        "_ref": "9dddbf4e-5eba-4f63-9cdc-9d80ce4c0099",
+        "_type": "reference"
+      },
+      {
+        "_key": "be540f581b81",
+        "_ref": "b2046ad8-754a-4c71-8c70-d4c1fd18b071",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "barcode": {
+        "_type": "barcode",
+        "format": "CODE39"
+      },
+      "grams": 94,
+      "images": [
+        {
+          "_key": "BWN1VjGy",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-2bf5b3450550a2249746d4dd151e6c2af64c20ba-1000x1000-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "G4vTToSl",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-c36a798b5b5d6aefaef986200800bf0cf2172246-1200x976-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "price": 5
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "snorer-lakris"
+    },
+    "tags": [
+      "Liquorice"
+    ],
+    "title": "Snører Lakris",
+    "vendor": {
+      "_ref": "46197d35-02d1-4f73-a093-9146a54adc0c",
+      "_type": "reference"
+    }
+  },
+  {
+    "_createdAt": "2018-04-25T11:14:13Z",
+    "_id": "9e2a73f1-d97a-4653-b360-cf76759dff83",
+    "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
+    "_type": "product",
+    "_updatedAt": "2022-02-25T12:27:17Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "Best selling Norwegian licorice"
+    },
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "9fb3271ca6d8",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "9fb3271ca6d80",
+              "_type": "span",
+              "marks": [],
+              "text": "The licorice caramel with the special, grainy consistency. Kick has existed since 1954, and today it is the best selling sugar product in Norway."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "nb": [
+        {
+          "_key": "ca0fa0bfa984",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "ca0fa0bfa9840",
+              "_type": "span",
+              "marks": [],
+              "text": "Næringsinnhold per 100 gram"
+            }
+          ],
+          "markDefs": [],
+          "style": "h2"
+        },
+        {
+          "_key": "cf0f8bf6c459",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "cf0f8bf6c4590",
+              "_type": "span",
+              "marks": [],
+              "text": "Energi: 1812 kJ"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "ea5868bac7f5",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "ea5868bac7f50",
+              "_type": "span",
+              "marks": [],
+              "text": "Kalorier: 430 kcal"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "ff58d00cfe0f",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "ff58d00cfe0f0",
+              "_type": "span",
+              "marks": [],
+              "text": "Fett: 14 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "c0edf6b0a38b",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "c0edf6b0a38b0",
+              "_type": "span",
+              "marks": [],
+              "text": "Mettet fett: 14 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "ab1036ffb91b",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "ab1036ffb91b0",
+              "_type": "span",
+              "marks": [],
+              "text": "Karbohydrater: 74 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "7373f862585a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "7373f862585a0",
+              "_type": "span",
+              "marks": [],
+              "text": "Sukkerarter: 54 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "1c7644ba5632",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "1c7644ba56320",
+              "_type": "span",
+              "marks": [],
+              "text": "Sukkeralkoholer: 0 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "d5506f8b2269",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d5506f8b22690",
+              "_type": "span",
+              "marks": [],
+              "text": "Protein: 2.3 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "21f9a6c67c5a",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "21f9a6c67c5a0",
+              "_type": "span",
+              "marks": [],
+              "text": "Salt: 0.09 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "79a69178e4f3",
+        "_ref": "b2046ad8-754a-4c71-8c70-d4c1fd18b071",
+        "_type": "reference"
+      },
+      {
+        "_key": "aa7f38426b12",
+        "_ref": "9dddbf4e-5eba-4f63-9cdc-9d80ce4c0099",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "grams": 23,
+      "images": [
+        {
+          "_key": "HVkKkTup",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-5d7ff3cf2d750997335be15f8ce185ab51bdc615-1000x1000-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "price": 3.99
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "kick-lakris"
+    },
+    "title": "Kick Lakris",
+    "vendor": {
+      "_ref": "46197d35-02d1-4f73-a093-9146a54adc0c",
+      "_type": "reference"
+    }
+  },
+  {
+    "_createdAt": "2018-04-25T11:00:47Z",
+    "_id": "a3e77206-fc45-4d37-8e08-dc1b7b744570",
+    "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
+    "_type": "product",
+    "_updatedAt": "2022-02-25T12:27:17Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "Delicious milky, hazelnut filling",
+      "nb": "Kinder Schoko-bons kombinerer den tradisjonelle kjente Kinder melkesjokoladen – med en kremet melkefylling med sprø hasselnøtter. \n\nKinder Schoko-bons passer til deling sammen med venner og familie. "
+    },
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "5d6bf8df8036",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "5d6bf8df80360",
+              "_type": "span",
+              "marks": [],
+              "text": "Kinder Schoko-Bons is a tempting milk chocolate bite with delicious milky, hazelnut filling. Kinder Schoko-Bons, a treat for everyone in your family. Made from milk chocolate. Filled with a wonderful milk cream filling with bits of hazelnut!"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "nb": [
+        {
+          "_key": "2c9dd35e70be",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "2c9dd35e70be0",
+              "_type": "span",
+              "marks": [],
+              "text": "Ingredienser"
+            }
+          ],
+          "markDefs": [],
+          "style": "h4"
+        },
+        {
+          "_key": "ca00ad804ad7",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "ca00ad804ad70",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Melkesjokolade"
+            },
+            {
+              "_key": "ca00ad804ad71",
+              "_type": "span",
+              "marks": [],
+              "text": " 50% (sukker, "
+            },
+            {
+              "_key": "ca00ad804ad72",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "helmelkpulver"
+            },
+            {
+              "_key": "ca00ad804ad73",
+              "_type": "span",
+              "marks": [],
+              "text": ", kakaosmør, kakaomasse, emulgator: lecitiner ("
+            },
+            {
+              "_key": "ca00ad804ad74",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "soya"
+            },
+            {
+              "_key": "ca00ad804ad75",
+              "_type": "span",
+              "marks": [],
+              "text": "); vanillin), sukker, "
+            },
+            {
+              "_key": "ca00ad804ad76",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "skummetmelkpulver"
+            },
+            {
+              "_key": "ca00ad804ad77",
+              "_type": "span",
+              "marks": [],
+              "text": ", palmeolje, "
+            },
+            {
+              "_key": "ca00ad804ad78",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "hasselnøtter"
+            },
+            {
+              "_key": "ca00ad804ad79",
+              "_type": "span",
+              "marks": [],
+              "text": " (5,8%), konsentrert "
+            },
+            {
+              "_key": "ca00ad804ad710",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "smør"
+            },
+            {
+              "_key": "ca00ad804ad711",
+              "_type": "span",
+              "marks": [],
+              "text": ", sjokolade (sukker, kakaomasse, kakaosmør, emulgator: lecitiner ("
+            },
+            {
+              "_key": "ca00ad804ad712",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "soya"
+            },
+            {
+              "_key": "ca00ad804ad713",
+              "_type": "span",
+              "marks": [],
+              "text": "); vanillin), glasur (gummi arabicum, skjellakk), glukosesirup, emulgator: lecitiner ("
+            },
+            {
+              "_key": "ca00ad804ad714",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "soya"
+            },
+            {
+              "_key": "ca00ad804ad715",
+              "_type": "span",
+              "marks": [],
+              "text": "), aromaer.\n\nMelkekomponenter totalt: 28% - Kakaokomponenter totalt: 16%."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "21dbb73e4929",
+        "_ref": "55a74606-ad5b-4e09-8d4b-e3b06c24912c",
+        "_type": "reference"
+      },
+      {
+        "_key": "75c33e29e616",
+        "_ref": "a5278ab5-b6ee-45bf-9751-e2cec6f5fddc",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "images": [
+        {
+          "_key": "U6kuqC2a",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-75dbf418970a2bef2caf8e7d516229fa40a25a38-1000x1000-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "price": 2.99
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "ferrero-kinder-schoko-bons"
+    },
+    "title": "Ferrero Kinder Schoko-Bons",
+    "vendor": {
+      "_ref": "2c3b7f88-ee95-4641-8a0a-3564a14b0778",
+      "_type": "reference"
+    }
+  },
+  {
+    "_createdAt": "2018-04-25T11:12:40Z",
+    "_id": "b090788a-9c94-4c97-8b8b-85fadefde097",
+    "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
+    "_type": "product",
+    "_updatedAt": "2022-02-25T12:27:17Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "Milk chocolate from Norwegian cows"
+    },
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "f68f25e38141",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "f68f25e381410",
+              "_type": "span",
+              "marks": [],
+              "text": "A milk chocolate from the Norwegian chocolate brand Freia that has been the most sold chocolate in Norway since the 1960s. The chocolate was launched in 1906 after a Swiss recipe, originally called 'Freia Melkechokolade'. The chocolate is consistently marketed to create national romantic associations - as the essence of everything that is Norwegian."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "71e413862f8e",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "71e413862f8e0",
+              "_type": "span",
+              "marks": [],
+              "text": "Freia was purchased in 1993 by "
+            },
+            {
+              "_key": "71e413862f8e1",
+              "_type": "span",
+              "marks": [
+                "2c14a4299b10"
+              ],
+              "text": "Kraft Foods Nordic"
+            },
+            {
+              "_key": "71e413862f8e2",
+              "_type": "span",
+              "marks": [],
+              "text": " (today known as "
+            },
+            {
+              "_key": "71e413862f8e3",
+              "_type": "span",
+              "marks": [
+                "4b1e517242ea"
+              ],
+              "text": "Mondelēz International"
+            },
+            {
+              "_key": "71e413862f8e4",
+              "_type": "span",
+              "marks": [],
+              "text": "), something which may have given the branding a slightly bitter aftertaste."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "es": [
+        {
+          "_key": "144f22fd8bc2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "144f22fd8bc20",
+              "_type": "span",
+              "marks": [
+                "strong"
+              ],
+              "text": "Freia Melkesjokolade"
+            },
+            {
+              "_key": "144f22fd8bc21",
+              "_type": "span",
+              "marks": [],
+              "text": " es una "
+            },
+            {
+              "_key": "144f22fd8bc22",
+              "_type": "span",
+              "marks": [
+                "a76f96f4e48f"
+              ],
+              "text": "barrita"
+            },
+            {
+              "_key": "144f22fd8bc23",
+              "_type": "span",
+              "marks": [],
+              "text": " de "
+            },
+            {
+              "_key": "144f22fd8bc24",
+              "_type": "span",
+              "marks": [
+                "b2d5f83d5c91"
+              ],
+              "text": "chocolate con leche"
+            },
+            {
+              "_key": "144f22fd8bc25",
+              "_type": "span",
+              "marks": [],
+              "text": " de la marca chocolatera noruega "
+            },
+            {
+              "_key": "144f22fd8bc26",
+              "_type": "span",
+              "marks": [
+                "778b61002958"
+              ],
+              "text": "Freia"
+            },
+            {
+              "_key": "144f22fd8bc27",
+              "_type": "span",
+              "marks": [],
+              "text": ", que ha sido la chocolatina más vendida en "
+            },
+            {
+              "_key": "144f22fd8bc28",
+              "_type": "span",
+              "marks": [
+                "68bf086ba621"
+              ],
+              "text": "Noruega"
+            },
+            {
+              "_key": "144f22fd8bc29",
+              "_type": "span",
+              "marks": [],
+              "text": " desde la década de 1960."
+            },
+            {
+              "_key": "144f22fd8bc210",
+              "_type": "span",
+              "marks": [
+                "306e5c7d635b"
+              ],
+              "text": "1"
+            },
+            {
+              "_key": "144f22fd8bc211",
+              "_type": "span",
+              "marks": [],
+              "text": "​ Se la conoce también como «Et lite stykke Norge» («un pedacito de Noruega»)."
+            },
+            {
+              "_key": "144f22fd8bc212",
+              "_type": "span",
+              "marks": [
+                "3b9b72e22c91"
+              ],
+              "text": "2"
+            },
+            {
+              "_key": "144f22fd8bc213",
+              "_type": "span",
+              "marks": [],
+              "text": "​ El producto fue lanzado en "
+            },
+            {
+              "_key": "144f22fd8bc214",
+              "_type": "span",
+              "marks": [
+                "ee35da0ff787"
+              ],
+              "text": "Suecia"
+            },
+            {
+              "_key": "144f22fd8bc215",
+              "_type": "span",
+              "marks": [],
+              "text": " en la década de 1950 bajo el nombre "
+            },
+            {
+              "_key": "144f22fd8bc216",
+              "_type": "span",
+              "marks": [
+                "32ad89c02025"
+              ],
+              "text": "Marabou"
+            },
+            {
+              "_key": "144f22fd8bc217",
+              "_type": "span",
+              "marks": [],
+              "text": ", marca que conservó en otros países nórdicos y más tarde en Estonia."
+            },
+            {
+              "_key": "144f22fd8bc218",
+              "_type": "span",
+              "marks": [
+                "27dbcf443df7"
+              ],
+              "text": "3"
+            },
+            {
+              "_key": "144f22fd8bc219",
+              "_type": "span",
+              "marks": [],
+              "text": "​"
+            }
+          ],
+          "markDefs": [
+            {
+              "_key": "a76f96f4e48f",
+              "_type": "link",
+              "href": "https://es.wikipedia.org/wiki/Barrita_de_chocolate"
+            },
+            {
+              "_key": "b2d5f83d5c91",
+              "_type": "link",
+              "href": "https://es.wikipedia.org/wiki/Chocolate_con_leche"
+            },
+            {
+              "_key": "778b61002958",
+              "_type": "link",
+              "href": "https://es.wikipedia.org/w/index.php?title=Freia_(chocolate)&action=edit&redlink=1"
+            },
+            {
+              "_key": "68bf086ba621",
+              "_type": "link",
+              "href": "https://es.wikipedia.org/wiki/Noruega"
+            },
+            {
+              "_key": "306e5c7d635b",
+              "_type": "link",
+              "href": "https://es.wikipedia.org/wiki/Freia_Melkesjokolade#cite_note-freia-1"
+            },
+            {
+              "_key": "3b9b72e22c91",
+              "_type": "link",
+              "href": "https://es.wikipedia.org/wiki/Freia_Melkesjokolade#cite_note-2"
+            },
+            {
+              "_key": "ee35da0ff787",
+              "_type": "link",
+              "href": "https://es.wikipedia.org/wiki/Suecia"
+            },
+            {
+              "_key": "32ad89c02025",
+              "_type": "link",
+              "href": "https://es.wikipedia.org/w/index.php?title=Marabou_(chocolate)&action=edit&redlink=1"
+            },
+            {
+              "_key": "27dbcf443df7",
+              "_type": "link",
+              "href": "https://es.wikipedia.org/wiki/Freia_Melkesjokolade#cite_note-3"
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_key": "e9832724ebf0",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "e9832724ebf00",
+              "_type": "span",
+              "marks": [],
+              "text": "Freia fue creada en 1906 por Johan Throne Holst (1868–1946), quien cuando asumió la gestión advirtió que había un mercado potencial para el chocolate con leche, además del chocolate negro y otros productos minoritarios que Freia estaba produciendo entonces. Aunque fue un éxito, no fue hasta la década de 1920 cuando la mayoría de la gente dispuso de dinero para comprar chocolate, que en esa época era un "
+            },
+            {
+              "_key": "e9832724ebf01",
+              "_type": "span",
+              "marks": [
+                "bd6bb6e65778"
+              ],
+              "text": "producto de lujo"
+            },
+            {
+              "_key": "e9832724ebf02",
+              "_type": "span",
+              "marks": [],
+              "text": "."
+            },
+            {
+              "_key": "e9832724ebf03",
+              "_type": "span",
+              "marks": [
+                "c5789575838e"
+              ],
+              "text": "1"
+            },
+            {
+              "_key": "e9832724ebf04",
+              "_type": "span",
+              "marks": [],
+              "text": "​"
+            }
+          ],
+          "markDefs": [
+            {
+              "_key": "bd6bb6e65778",
+              "_type": "link",
+              "href": "https://es.wikipedia.org/wiki/Producto_de_lujo"
+            },
+            {
+              "_key": "c5789575838e",
+              "_type": "link",
+              "href": "https://es.wikipedia.org/wiki/Freia_Melkesjokolade#cite_note-freia-1"
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "nb": [
+        {
+          "_key": "9d37a07e4d01",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "9d37a07e4d010",
+              "_type": "span",
+              "marks": [
+                "3af10eea667b"
+              ],
+              "text": "Næringsinnhold per 100 gram"
+            }
+          ],
+          "markDefs": [],
+          "style": "h2"
+        },
+        {
+          "_key": "71a7e80d9467",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "71a7e80d94670",
+              "_type": "span",
+              "marks": [],
+              "text": "Energi 2335 kj"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "06bbfd7b3292",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "06bbfd7b32920",
+              "_type": "span",
+              "marks": [],
+              "text": "Kalorier 560 kcal"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "93bd5e279528",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "93bd5e2795280",
+              "_type": "span",
+              "marks": [],
+              "text": "Fett 34 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "92cf34cee261",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "92cf34cee2610",
+              "_type": "span",
+              "marks": [],
+              "text": "Mettet fett 21 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "80dd81215af2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "80dd81215af20",
+              "_type": "span",
+              "marks": [],
+              "text": "Karbohydrater 53 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "c86caba2330c",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "c86caba2330c0",
+              "_type": "span",
+              "marks": [],
+              "text": "Sukkerarter 52,5 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "70ae3d020820",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "70ae3d0208200",
+              "_type": "span",
+              "marks": [],
+              "text": "Kostfiber 2,4 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "38dfd5456be0",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "38dfd5456be00",
+              "_type": "span",
+              "marks": [],
+              "text": "Protein 8,3 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "01b6c1a80b31",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "01b6c1a80b310",
+              "_type": "span",
+              "marks": [],
+              "text": "Salt 0,2 g"
+            }
+          ],
+          "level": 1,
+          "listItem": "bullet",
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "f096c808b5fb",
+        "_ref": "9dddbf4e-5eba-4f63-9cdc-9d80ce4c0099",
+        "_type": "reference"
+      },
+      {
+        "_key": "57c7176da4d0",
+        "_ref": "a5278ab5-b6ee-45bf-9751-e2cec6f5fddc",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "grams": 200,
+      "images": [
+        {
+          "_key": "H0HEP8ge",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-f6c36068e5ff1ec4f86e32529ffb4242fa9f86c2-500x264-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "price": 5
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "melkesjokolade"
+    },
+    "tags": [
+      "chocolate"
+    ],
+    "title": "Melkesjokolade",
+    "vendor": {
+      "_ref": "2d10346c-8fc2-4f05-a611-13dac20adaba",
+      "_type": "reference"
+    }
+  },
+  {
+    "_createdAt": "2018-04-25T11:13:18Z",
+    "_id": "c4d415a6-01c3-47ab-83ee-d7a4fc960844",
+    "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
+    "_type": "product",
+    "_updatedAt": "2022-02-25T12:27:17Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "Ammonium chloride in a puck-shaped box 😳"
+    },
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "728d72055ece",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "728d72055ece0",
+              "_type": "span",
+              "marks": [],
+              "text": "Hockey Powder is made from sugar, ammonium chloride and licorice powder. It ships in a box resembling an ice hockey puck. Hence the name."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "7fbdcaafeaa0",
+        "_ref": "b2046ad8-754a-4c71-8c70-d4c1fd18b071",
+        "_type": "reference"
+      },
+      {
+        "_key": "c3ca95a7ed7a",
+        "_ref": "15411164-418a-4f67-ac47-6ba060c61976",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "barcode": {
+        "_type": "barcode",
+        "barcode": "312321221123",
+        "format": "EAN13"
+      },
+      "grams": 20,
+      "images": [
+        {
+          "_key": "TCurAc3U",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-dc80a290234fd8a7da517f461fc542c557425a70-1000x1000-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "price": 5.99,
+      "title": "Test"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "hockey-pulver"
+    },
+    "tags": [
+      "Liquorice",
+      "Strange"
+    ],
+    "title": "Hockey Pulver",
+    "vendor": {
+      "_ref": "baed24f4-6484-4a33-a2eb-8d7d98f2fc87",
+      "_type": "reference"
+    }
+  },
+  {
+    "_createdAt": "2018-04-25T11:08:59Z",
+    "_id": "c72b7977-2afa-4478-8a74-ecca1194d526",
+    "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
+    "_type": "product",
+    "_updatedAt": "2022-02-25T12:27:17Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "A yellow box enchants the eyes"
+    },
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "50ff61fb4a19",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "50ff61fb4a190",
+              "_type": "span",
+              "marks": [],
+              "text": "The Yellow Box is a gift that enchants the eyes, a surprise and a change of affection. For any time and anywhere, it has a diversity of flavors that please all tastes!"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "3db231f46fb4",
+        "_ref": "a5278ab5-b6ee-45bf-9751-e2cec6f5fddc",
+        "_type": "reference"
+      },
+      {
+        "_key": "f88096c92a73",
+        "_ref": "f4fbb98f-ebd8-49e6-bf6f-4dc52aac0426",
+        "_type": "reference"
+      },
+      {
+        "_key": "7e29c4e5ea2e",
+        "_ref": "e81aa152-4530-4090-bb9f-b68eaba1ad01",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "grams": 300,
+      "images": [
+        {
+          "_key": "Nsm1hw0z",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-7ebac9c71e9ff09e6715a89968a653043729f44b-600x513-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "RO4moemZ",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-413a43fe0db82c43539fb1d32975946ff47a6251-600x513-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "price": 49
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "caixa-de-bombons-sortidos-garoto"
+    },
+    "tags": [
+      "chocolate",
+      "brazilian"
+    ],
+    "title": "Caixa de Bombons Sortidos Garoto",
+    "vendor": {
+      "_ref": "5fab1ebb-6efa-4168-82ab-b58bebdd2db4",
+      "_type": "reference"
+    }
+  },
+  {
+    "_createdAt": "2018-04-25T10:56:44Z",
+    "_id": "db7f355c-a601-4c10-ba45-7ee4c0fb7a5d",
+    "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
+    "_type": "product",
+    "_updatedAt": "2022-02-25T12:27:17Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "Kit Kat Everyday Luxury!"
+    },
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "d5de0513bd78",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d5de0513bd780",
+              "_type": "span",
+              "marks": [],
+              "text": "New \"Mainichi no Zeitaku\" (Everyday Luxury) series of Kit Kat inspired by the Kit Kat official luxury shop in Japan, called a \"Chocolatory\". A pack contains approximately 15 chocolate bars."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "b8ff34805a9d",
+        "_ref": "1ba26a25-7f35-4d24-804e-09cc76a0cd73",
+        "_type": "reference"
+      },
+      {
+        "_key": "91bd948cefc9",
+        "_ref": "a5278ab5-b6ee-45bf-9751-e2cec6f5fddc",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "grams": 119,
+      "images": [
+        {
+          "_key": "NZnua1SI",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6033e418108c33bf7ddcd0bfa66a3fa200de9d87-600x500-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "NwH2nIwa",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-240001073c2bcf536d36b9e03b530cad823c6497-1000x1000-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "price": 5.99
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "kit-kat-petit-matcha-double-berry-and-almond"
+    },
+    "tags": [
+      "chocolate",
+      "japan"
+    ],
+    "title": "Kit Kat Petit Matcha - Double Berry & Almond",
+    "vendor": {
+      "_ref": "1e6f68d7-10bd-4b83-8880-a0ec0227b725",
+      "_type": "reference"
+    }
+  },
+  {
+    "_createdAt": "2018-04-25T10:59:19Z",
+    "_id": "drafts.227bbb74-5656-4376-80b3-7424bddc5001",
+    "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
+    "_type": "product",
+    "_updatedAt": "2022-02-25T12:27:17Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "One of the most fun Kracie kits to make!"
+    },
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "a94b78f6db46",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a94b78f6db460",
+              "_type": "span",
+              "marks": [],
+              "text": "DIY set Happy Kitchen for making Fast Food candy, with 2 cheeseburgers, French Fries and a drink. Everything is included to make two mini hamburgers, fries, and a drink. All you need is a bit of water and a microwave. The instructions are on the back of the pack in Japanese but just follow the pictures and have fun! Challenge yourself today!   "
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "9920b1ffc97d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "9920b1ffc97d0",
+              "_type": "span",
+              "marks": [],
+              "text": "Popin' Cookin' is a series of edible DIY candy in funny shapes, that you can easily make yourself by adding water to the ingredients of the package"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "6ca8c9308700",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "6ca8c93087000",
+              "_type": "span",
+              "marks": [],
+              "text": "Contents: 6x bags of powder with different candy ingredients, 1x spoon, 1x knife, 1x cup, 1x mold."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "5dc7214683df",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "5dc7214683df0",
+              "_type": "span",
+              "marks": [],
+              "text": "Size of the box: width: 14.5cm (5.7\"), height: 13cm (5.1\"), depth: 4.5cm (1.7\"), incl. instructions with pictures (see also instruction video below), mold can of course be reused."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "0acb09f21489",
+        "_ref": "1ba26a25-7f35-4d24-804e-09cc76a0cd73",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "barcode": {
+        "_type": "barcode",
+        "barcode": "4901551354283",
+        "format": "EAN13"
+      },
+      "images": [
+        {
+          "_key": "ly68v3mo",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-76b6b872f92555bcb67d9a2551c75b28e0d90b2e-600x500-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "price": 9.99
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "happy-kitchen-hamburger"
+    },
+    "tags": [
+      "DIY"
+    ],
+    "title": "Happy Kitchen - Hamburger",
+    "vendor": {
+      "_ref": "01ca40b6-e7fd-4676-af25-33f591de51c0",
+      "_type": "reference"
+    }
+  },
+  {
+    "_createdAt": "2018-04-25T11:15:02Z",
+    "_id": "drafts.8a4337ae-4ec8-431f-8890-9e0b0192331a",
+    "_rev": "614i2j-osv-4mr-gkz-q96femj2p",
+    "_type": "product",
+    "_updatedAt": "2022-03-08T11:58:18Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "Stringy licorice candy. Party favourite!"
+    },
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "c70ec97e834b",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "c70ec97e834b0",
+              "_type": "span",
+              "marks": [],
+              "text": "Creative candy! Not only do great tasting, but also perfect for birthdays and competitions to finish them first or as a roping for gingerbread pirate ships!"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "43ac10978820",
+        "_ref": "9dddbf4e-5eba-4f63-9cdc-9d80ce4c0099",
+        "_type": "reference"
+      },
+      {
+        "_key": "be540f581b81",
+        "_ref": "b2046ad8-754a-4c71-8c70-d4c1fd18b071",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "barcode": {
+        "_type": "barcode",
+        "format": "CODE39"
+      },
+      "images": [
+        {
+          "_key": "BWN1VjGy",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-2bf5b3450550a2249746d4dd151e6c2af64c20ba-1000x1000-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "G4vTToSl",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-c36a798b5b5d6aefaef986200800bf0cf2172246-1200x976-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "isEedsTaxable": true,
+      "mls": 1,
+      "price": 5
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "snorer-lakris"
+    },
+    "tags": [
+      "Liquorice"
+    ],
+    "title": "Snører Lakris",
+    "vendor": {
+      "_ref": "46197d35-02d1-4f73-a093-9146a54adc0c",
+      "_type": "reference"
+    }
+  },
+  {
+    "_createdAt": "2018-04-25T10:58:44Z",
+    "_id": "drafts.ea13f8d1-d956-4b7d-ba9b-b4158a1b4d12",
+    "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
+    "_type": "product",
+    "_updatedAt": "2022-02-25T12:27:17Z",
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "37935741f153",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "37935741f1530",
+              "_type": "span",
+              "marks": [],
+              "text": "Tamaruya-honten Wasabi is a rare Shizuoka-Kanto Edition of Kit Kat from Japan.  Transforming the traditional burn of Wasabi heat to a slightly sweetened flavor, the Japanese Wasabi Kit Kat is not only rare, it's delicious!  With mild tones of horseradish, at first it may seem intimidating to less daring snack enthusiasts, but once you taste this unusual chocolate snack you will be hooked.  "
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "88d6be0d5b3f",
+        "_ref": "1ba26a25-7f35-4d24-804e-09cc76a0cd73",
+        "_type": "reference"
+      },
+      {
+        "_key": "437f83a9a071",
+        "_ref": "a5278ab5-b6ee-45bf-9751-e2cec6f5fddc",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "grams": 18,
+      "images": [
+        {
+          "_key": "GbQWDPvy",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-93089fc306fb5886bdf7716292b0e3f1a7fe3793-600x500-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "mn0IdUhb",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-5a5ff3efe801569be5d7b86599aeb505a8947112-1200x675-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "YG97E4rW",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-a1fb220365dd39f6fa29850004f521117c42513c-600x600-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "tijtDBeV",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-9d23ee87890c8064de598d443b277218b3e5dcef-1000x541-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "price": 13.99
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "kit-kat-wasabi"
+    },
+    "title": "Kit Kat Wasabi",
+    "vendor": {
+      "_ref": "1e6f68d7-10bd-4b83-8880-a0ec0227b725",
+      "_type": "reference"
+    }
+  },
+  {
+    "_createdAt": "2018-04-25T11:16:29Z",
+    "_id": "e1e3a7c8-359a-4cda-9fa3-5fcc12af4d91",
+    "_rev": "TN0tvfn1lXhPHZXOHUTRqP",
+    "_type": "product",
+    "_updatedAt": "2022-03-08T12:13:55Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "Perfect for sharing or snacking!"
+    },
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "37f3a030f7b1",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "37f3a030f7b10",
+              "_type": "span",
+              "marks": [],
+              "text": "12 Cadbury Dairy Milk Caramello Koala treats perfect for sharing or snacking! Caramello Koala is a delicious fun snack made from Australia’s favourite chocolate, Cadbury Dairy Milk milk chocolate. Filled with a flowing caramel centre, Caramello Koala is Australia's favourite Koala! Also available in a 35g single Koala."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "823bcd0a070b",
+        "_ref": "a5278ab5-b6ee-45bf-9751-e2cec6f5fddc",
+        "_type": "reference"
+      },
+      {
+        "_key": "84377060110b",
+        "_ref": "f4fbb98f-ebd8-49e6-bf6f-4dc52aac0426",
+        "_type": "reference"
+      },
+      {
+        "_key": "21b182d66230",
+        "_ref": "db68730b-90c5-4e17-a48c-4bf4b054562a",
+        "_type": "reference"
+      },
+      {
+        "_key": "b8f42b55fec7",
+        "_ref": "da684f7e-4b48-4cdc-905b-f3c03c7a69fb",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "grams": 180,
+      "images": [
+        {
+          "_key": "pscguowy",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-789bc81e325776656da86e8e879fd541eb82a01f-210x300-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "BZoDQsHq",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-3aefa94482a495d3f18fd277b0fcead36b5a9326-1200x1200-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "isEndsTaxable": true,
+      "mls": 1,
+      "price": 5.99,
+      "sku": "1234SKU",
+      "wprice": 5
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "cadbury-caramello-koala-share-pack"
+    },
+    "tags": [
+      "caramel"
+    ],
+    "title": "Cadbury Caramello Koala Share Pack",
+    "vendor": {
+      "_ref": "a9c5b6e6-7176-4a49-9181-8a883fc4836d",
+      "_type": "reference"
+    }
+  },
+  {
+    "_createdAt": "2018-04-25T10:58:44Z",
+    "_id": "ea13f8d1-d956-4b7d-ba9b-b4158a1b4d12",
+    "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
+    "_type": "product",
+    "_updatedAt": "2022-02-25T12:27:17Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "A rare Shizuoka-Kanto Edition of Kit Kat from Japan"
+    },
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "37935741f153",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "37935741f1530",
+              "_type": "span",
+              "marks": [],
+              "text": "Tamaruya-honten Wasabi is a rare Shizuoka-Kanto Edition of Kit Kat from Japan.  Transforming the traditional burn of Wasabi heat to a slightly sweetened flavor, the Japanese Wasabi Kit Kat is not only rare, it's delicious!  With mild tones of horseradish, at first it may seem intimidating to less daring snack enthusiasts, but once you taste this unusual chocolate snack you will be hooked.  "
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "88d6be0d5b3f",
+        "_ref": "1ba26a25-7f35-4d24-804e-09cc76a0cd73",
+        "_type": "reference"
+      },
+      {
+        "_key": "437f83a9a071",
+        "_ref": "a5278ab5-b6ee-45bf-9751-e2cec6f5fddc",
+        "_type": "reference"
+      }
+    ],
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "grams": 12,
+      "images": [
+        {
+          "_key": "GbQWDPvy",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-93089fc306fb5886bdf7716292b0e3f1a7fe3793-600x500-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "mn0IdUhb",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-5a5ff3efe801569be5d7b86599aeb505a8947112-1200x675-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "YG97E4rW",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-a1fb220365dd39f6fa29850004f521117c42513c-600x600-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "tijtDBeV",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-9d23ee87890c8064de598d443b277218b3e5dcef-1000x541-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "price": 10.99
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "kit-kat-wasabi"
+    },
+    "title": "Kit Kat Wasabi",
+    "vendor": {
+      "_ref": "1e6f68d7-10bd-4b83-8880-a0ec0227b725",
+      "_type": "reference"
+    }
+  }
+]

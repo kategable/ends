@@ -19,6 +19,11 @@ export default {
       type: 'number',
     },
     {
+      title: 'Wholesale Price',
+      name: 'wprice',
+      type: 'number',
+    },
+    {
       title: 'Price',
       name: 'price',
       type: 'number',
@@ -35,7 +40,7 @@ export default {
     },
     {
       title: 'ENDS Taxable',
-      name: 'isEedsTaxable',
+      name: 'isEndsTaxable',
       type: 'boolean',
     },
     {

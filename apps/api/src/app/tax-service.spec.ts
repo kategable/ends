@@ -40,7 +40,12 @@ describe('TaxService', () => {
     const result = service.culculate(request);
     expect(result).toEqual(0);
   });
+  it('should return zero when product ENDSTaxable===false', () => {
+    const request = new CartRequest();
+    const result = service.culculate(request);
+    expect(result).toEqual(0);
 
+  });
   it('should return 10.99 if calaculation hasWholesaleRate==true', () => {
     const request = new CartRequest();
     const result = service.culculate(request);

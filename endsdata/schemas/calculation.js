@@ -16,7 +16,7 @@ export default {
     { name: 'WholesaleRate', type: 'number', title: '% Wholesale Rate' },
     { name: 'hasFluidRate', type: 'boolean', title: 'Charge Per Fluid Rate' },
     { name: 'FluidRate', type: 'number', title: '% Per Fluid Rate' },
-    { name: 'hasRetailRate', type: 'boolean', title: 'Charge Petail Rate' },
+    { name: 'hasRetailRate', type: 'boolean', title: 'Charge Retail Rate' },
     { name: 'RetailRate', type: 'number', title: '% Retail Rate' },
     {
       name: 'categories',
