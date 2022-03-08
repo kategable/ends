@@ -20,4 +20,5 @@ https://www.sanity.io/guides/create-a-single-page-application-with-angular-and-s
 ## API local
 http://localhost:3334/api/
 
-
+## API tests
+nx run api:test

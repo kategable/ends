@@ -18,6 +18,7 @@ export class TaxService {
     );
     console.log('found address', found);
     //addres validation
+    //check if CBDApp has this implemented
     if (found.length === 0) throwError(() => 'no address found');
 
     //read calcs for this city
@@ -37,7 +38,7 @@ export class TaxService {
     //not found skip tax
     //3. if hasTax === true
     // go through all products in cart
-    // select product data from store
+    // select product data from store(file) based on SKU and ShopId(TODO: add later)
     //4. calculate tax based on product type
     //product.categories(has=>foundStateCalc.categories)
     // if hasWholesaleRate

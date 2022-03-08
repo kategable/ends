@@ -20,6 +20,30 @@
     "state": "Alaska"
   },
   {
+    "RetailRate": 40,
+    "_createdAt": "2022-03-05T04:56:13Z",
+    "_id": "5474de3c-7c96-4c10-8300-08b4ae145ca5",
+    "_rev": "caobftxRaOyN7ObSyNx3rJ",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-05T04:56:13Z",
+    "categories": [
+      {
+        "_key": "090bb8e07a82",
+        "_ref": "da684f7e-4b48-4cdc-905b-f3c03c7a69fb",
+        "_type": "reference"
+      },
+      {
+        "_key": "1847651b9912",
+        "_ref": "7e6424af-743e-4e73-bebd-417f2875266a",
+        "_type": "reference"
+      }
+    ],
+    "city": "Aspen",
+    "hasRetailRate": true,
+    "hasTax": true,
+    "state": "Colorado"
+  },
+  {
     "_createdAt": "2022-03-04T21:48:48Z",
     "_id": "63bd1aa8-4e90-4620-8b03-d0752916d854",
     "_rev": "caobftxRaOyN7ObSyN6jgd",
@@ -28,12 +52,22 @@
     "state": "Alaska"
   },
   {
+    "RetailRate": 35,
     "_createdAt": "2022-03-04T21:54:08Z",
     "_id": "6456884b-7604-4076-8678-4694b999d3e0",
-    "_rev": "IMEhL00nuGQl52jj08ZcIG",
+    "_rev": "caobftxRaOyN7ObSyNwqgL",
     "_type": "calculation",
-    "_updatedAt": "2022-03-04T22:14:26Z",
-    "state": "Colorado"
+    "_updatedAt": "2022-03-05T04:53:58Z",
+    "categories": [
+      {
+        "_key": "214f2a4db6f3",
+        "_ref": "da684f7e-4b48-4cdc-905b-f3c03c7a69fb",
+        "_type": "reference"
+      }
+    ],
+    "hasTax": true,
+    "state": "Colorado",
+    "year": 2022
   },
   {
     "WholesaleRate": 56.93,
@@ -53,6 +87,58 @@
     "_type": "calculation",
     "_updatedAt": "2022-03-04T21:52:14Z",
     "state": "Arizona"
+  },
+  {
+    "RetailRate": 40,
+    "WholesaleRate": 123,
+    "_createdAt": "2022-03-05T04:56:13Z",
+    "_id": "drafts.5474de3c-7c96-4c10-8300-08b4ae145ca5",
+    "_rev": "pch5h9-akk-tkr-myy-6lyqa2ckh",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-08T12:30:43Z",
+    "categories": [
+      {
+        "_key": "090bb8e07a82",
+        "_ref": "da684f7e-4b48-4cdc-905b-f3c03c7a69fb",
+        "_type": "reference"
+      },
+      {
+        "_key": "1847651b9912",
+        "_ref": "7e6424af-743e-4e73-bebd-417f2875266a",
+        "_type": "reference"
+      }
+    ],
+    "city": "Aspen",
+    "hasFluidRate": true,
+    "hasRetailRate": true,
+    "hasTax": true,
+    "hasWholesaleRate": true,
+    "state": "Colorado"
+  },
+  {
+    "WholesaleRate": 56.93,
+    "_createdAt": "2022-03-04T21:52:53Z",
+    "_id": "drafts.a4360ffd-a694-4741-bb1e-9518aed6c08d",
+    "_rev": "kbqdba-8u1-tms-zis-isze7wqqi",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-05T04:48:29Z",
+    "categories": [
+      {
+        "_key": "e283c0d03280",
+        "_ref": "da684f7e-4b48-4cdc-905b-f3c03c7a69fb",
+        "_strengthenOnPublish": {
+          "template": {
+            "id": "category"
+          },
+          "type": "category"
+        },
+        "_type": "reference",
+        "_weak": true
+      }
+    ],
+    "hasTax": true,
+    "hasWholesaleRate": true,
+    "state": "California"
   },
   {
     "_createdAt": "2022-03-04T21:52:27Z",
