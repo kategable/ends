@@ -1,13 +1,11 @@
-import { TestBed } from '@angular/core/testing';
+import { SanityDataService } from './sanity-data.service';
 
-import { SanityService } from './sanity.service';
-
-describe('SanityService', () => {
-  let service: SanityService;
+describe('SanityDataService', () => {
+  let service: SanityDataService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(SanityService);
+   
+    service = new SanityDataService();
   });
 
   it('should be created', () => {
