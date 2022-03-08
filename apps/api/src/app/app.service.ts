@@ -1,3 +1,4 @@
+import { SanityService } from '@ends/data/sanity';
 import { Injectable } from '@nestjs/common';
 import { CartRequest, Message } from '@ends/api-interfaces';
 import { TaxService } from './tax.service';
@@ -5,8 +6,8 @@ import { TaxService } from './tax.service';
 @Injectable()
 export class AppService {
   // constructor(private readonly dataService: SanityDataService) {}
-  constructor(private readonly taxService: TaxService) {}
-  //constructor(private readonly taxService: TaxService,private readonly dataService: SanityDataService) {}
+  //constructor(private readonly taxService: TaxService) {}
+  constructor(private readonly taxService: TaxService,private readonly dataService: SanityService) {}
   saveOrder(cartRequest: CartRequest): number {
     console.log('order saved', cartRequest);
     return 123;
@@ -20,6 +21,6 @@ export class AppService {
     return { message: 'Welcome to api!' };
   }
   getProducts() {
-    // return this.dataService.getProducts();
+     return this.dataService.getProducts();
   }
 }
