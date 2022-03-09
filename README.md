@@ -22,3 +22,6 @@ http://localhost:3334/api/
 
 ## API tests
 nx run api:test
+
+## Sanity cheatsheet
+https://www.sanity.io/docs/query-cheat-sheet
