@@ -25,7 +25,7 @@ export class TaxService {
     const foundStateCalc = (<any[]>calculations).find(
       (calc) => calc.state === cartRequest.shipping.address.state
     );
-    if (foundStateCalc.length === 0) {
+    if (foundStateCalc?.length === 0) {
       return 0;
     }
     //1. loop through all foundStateCalc (state, city, county)
