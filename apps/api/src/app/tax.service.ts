@@ -28,6 +28,46 @@ export class TaxService {
     if (foundStateCalc.length === 0) {
       return 0;
     }
+    let check = false;
+    if (foundStateCalc["county"] === undefined && foundStateCalc["city"] === undefined) {
+      check = true;
+    } else {
+      if (foundStateCalc["county"] !== undefined) {
+        if (cartRequest.shipping.address.zipCode === foundStateCalc.county) {
+          check = true;
+        }
+      }
+
+      if (foundStateCalc["city"] !== undefined) {
+        if (cartRequest.shipping.address.zipCode === foundStateCalc.city) {
+          check = true;
+        }
+      }
+    }
+    if (check === true) {
+      if (foundStateCalc.hasTax === true) {
+        let productPrice = 0;
+          for(let product of cartRequest.cart.products){
+            productPrice+= product.price;
+          }
+        if (foundStateCalc.hasWholesaleRate === true) {
+          tax = productPrice * foundStateCalc.WholesaleRate;
+          return tax;
+        }
+        if (foundStateCalc.hasFluidRate === true) {
+          tax = productPrice * foundStateCalc.FluidRate;
+          return tax;
+        }
+        if (foundStateCalc.hasRetailRate === true) {
+          tax = productPrice * foundStateCalc.RetailRate;
+          return tax;
+        }
+      } else {
+        return 0;
+      }
+    } else {
+      return 0;
+    }
     //1. loop through all foundStateCalc (state, city, county)
     //2. if no county and no city => goto #3
     //2.1 if has county
