@@ -8,47 +8,55 @@ import { throwError } from 'rxjs';
 @Injectable()
 export class TaxService {
   culculate(cartRequest: CartRequest): number {
-    console.log('cartRequest', cartRequest);
     let tax = 0;
     //match address
     const found = (<any[]>cities).filter(
       (c) =>
         c.zip_code === cartRequest.shipping.address.zipCode &&
-        c.state === cartRequest.shipping.address.state
+        c.county === cartRequest.shipping.address.state
     );
-    console.log('found address', found);
+   // console.log('found address', found);
     //addres validation
     //check if CBDApp has this implemented
-    if (found.length === 0) throwError(() => 'no address found');
-
+   // if (found.length === 0) throwError(() => 'no address found');
+   if (found.length === 0){
+    throwError(() => 'no address found');
+   }
     //read calcs for this city
     const foundStateCalc = (<any[]>calculations).find(
       (calc) => calc.state === cartRequest.shipping.address.state
     );
-    if (foundStateCalc.length === 0) {
+    
+    if (foundStateCalc === undefined) {
       return 0;
     }
+    
     let check = false;
-    if (foundStateCalc["county"] === undefined && foundStateCalc["city"] === undefined) {
+    if (foundStateCalc.county === undefined && foundStateCalc.city === undefined) {
       check = true;
     } else {
-      if (foundStateCalc["county"] !== undefined) {
-        if (cartRequest.shipping.address.zipCode === foundStateCalc.county) {
-          check = true;
-        }
-      }
-
-      if (foundStateCalc["city"] !== undefined) {
+      if (foundStateCalc.city !== undefined) {
+        console.log('found address', found);
         if (cartRequest.shipping.address.zipCode === foundStateCalc.city) {
           check = true;
         }
       }
+      if (foundStateCalc.county !== undefined) {
+        if (cartRequest.shipping.address.zipCode === foundStateCalc.county) {
+          check = true;
+        }else{
+          console.log('cartRequest', cartRequest);
+          console.log(foundStateCalc.county);
+          console.log(foundStateCalc.city);
+        }
+      }
     }
     if (check === true) {
+      console.log(foundStateCalc.hasTax);
       if (foundStateCalc.hasTax === true) {
         let productPrice = 0;
-          for(let product of cartRequest.cart.products){
-            productPrice+= product.price;
+          for(let product of products){
+            productPrice+= product.defaultProductVariant.price;
           }
         if (foundStateCalc.hasWholesaleRate === true) {
           tax = productPrice * foundStateCalc.WholesaleRate;

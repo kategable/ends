@@ -8,6 +8,26 @@
     "state": "Alabama"
   },
   {
+    "_createdAt": "2022-03-04T21:48:24Z",
+    "_id": "11fdfaa4-7874-4304-9d97-42d513f1eec9",
+    "_rev": "P2xs1IiT75sLhipLc41noL",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:48:24Z",
+    "state": "Pinal",
+    "hasTax": false
+  },
+  {
+    "WholesaleRate": 10.99,
+    "_createdAt": "2022-03-04T21:52:53Z",
+    "_id": "a4360ffd-a694-4741-bb1e-9518aed6c08d",
+    "_rev": "P2xs1IiT75sLhipLc42eyT",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:52:53Z",
+    "hasTax": true,
+    "hasWholesaleRate": true,
+    "state": "Tulare"
+  },
+  {
     "WholesaleRate": 55,
     "_createdAt": "2022-03-04T21:49:06Z",
     "_id": "1e0618aa-3834-4c1d-9ed7-6831e04f48c4",
