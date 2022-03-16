@@ -17,7 +17,7 @@
     "hasTax": false
   },
   {
-    "WholesaleRate": 10.99,
+    "WholesaleRate": 20,
     "_createdAt": "2022-03-04T21:52:53Z",
     "_id": "a4360ffd-a694-4741-bb1e-9518aed6c08d",
     "_rev": "P2xs1IiT75sLhipLc42eyT",
@@ -26,6 +26,30 @@
     "hasTax": true,
     "hasWholesaleRate": true,
     "state": "Tulare"
+  },
+  {
+    "WholesaleRate": 10,
+    "_createdAt": "2022-03-04T21:52:53Z",
+    "_id": "a4360ffd-a694-4741-bb1e-9518aed6c08d",
+    "_rev": "P2xs1IiT75sLhipLc42eyT",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:52:53Z",
+    "hasTax": true,
+    "hasWholesaleRate": true,
+    "state": "Tulare",
+    "city": "123"
+  },
+  {
+    "WholesaleRate": 20,
+    "_createdAt": "2022-03-04T21:52:53Z",
+    "_id": "a4360ffd-a694-4741-bb1e-9518aed6c08d",
+    "_rev": "P2xs1IiT75sLhipLc42eyT",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:52:53Z",
+    "hasTax": true,
+    "hasWholesaleRate": true,
+    "state": "Tulare",
+    "county": "abc"
   },
   {
     "WholesaleRate": 55,

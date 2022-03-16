@@ -13,7 +13,7 @@ export class TaxService {
     const found = (<any[]>cities).filter(
       (c) =>
         c.zip_code === cartRequest.shipping.address.zipCode &&
-        c.county === cartRequest.shipping.address.state
+        c.state === cartRequest.shipping.address.state
     );
    // console.log('found address', found);
     //addres validation
@@ -26,11 +26,11 @@ export class TaxService {
     const foundStateCalc = (<any[]>calculations).find(
       (calc) => calc.state === cartRequest.shipping.address.state
     );
-    
+
     if (foundStateCalc === undefined) {
       return 0;
     }
-    
+
     let check = false;
     if (foundStateCalc.county === undefined && foundStateCalc.city === undefined) {
       check = true;
@@ -54,20 +54,26 @@ export class TaxService {
     if (check === true) {
       console.log(foundStateCalc.hasTax);
       if (foundStateCalc.hasTax === true) {
-        let productPrice = 0;
+        let productWholesalePrice = 0;//wholosaleRate from product.json;
+        let productRetailPrice = 0;//shopify
+        let productFluidWeight = 0 ;// json
+        let quantity = 0;//shopify
+
           for(let product of products){
-            productPrice+= product.defaultProductVariant.price;
+            productWholesalePrice+= product.defaultProductVariant.price * quantity;
+            productRetailPrice+= pricefromShopify * quantity;
+            productFluidWeight+= productLiquidWeight * quantity;
           }
-        if (foundStateCalc.hasWholesaleRate === true) {
-          tax = productPrice * foundStateCalc.WholesaleRate;
+        if (foundStateCalc.hasWholesaleRate) {
+          tax = productWholesalePrice * foundStateCalc.WholesaleRate ;
           return tax;
         }
-        if (foundStateCalc.hasFluidRate === true) {
-          tax = productPrice * foundStateCalc.FluidRate;
+        if (foundStateCalc.hasFluidRate) {
+          tax = productFluidWeight * foundStateCalc.FluidRate;
           return tax;
         }
-        if (foundStateCalc.hasRetailRate === true) {
-          tax = productPrice * foundStateCalc.RetailRate;
+        if (foundStateCalc.hasRetailRate ) {
+          tax = productRetailPrice * foundStateCalc.RetailRate ;
           return tax;
         }
       } else {

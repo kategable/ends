@@ -80,7 +80,7 @@ describe('TaxService', () => {
     let request = new CartRequest();
     let address = new Address();
     address.zipCode = '93201';
-    address.state = 'Tulare';
+    address.state = 'Calic';
     request.shipping = {address : address};
     const result = service.culculate(request);
     // Done

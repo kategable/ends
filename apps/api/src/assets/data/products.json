@@ -2,6 +2,7 @@
   {
     "_createdAt": "2018-04-25T10:59:19Z",
     "_id": "227bbb74-5656-4376-80b3-7424bddc5001",
+    "SKU": "227bbb74-5656-4376-80b3-7424bddc5001",
     "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
     "_type": "product",
     "_updatedAt": "2022-02-25T12:27:17Z",
@@ -94,7 +95,8 @@
           }
         }
       ],
-      "price": 1.00
+      "price": 1.00,
+      "fluidweight":2
     },
     "slug": {
       "_type": "slug",
