@@ -20,50 +20,71 @@ export class TaxService {
     //check if CBDApp has this implemented
    // if (found.length === 0) throwError(() => 'no address found');
    if (found.length === 0){
-    throwError(() => 'no address found');
+   // throwError(() => 'no address found');
+    return 0;
    }
     //read calcs for this city
-    const foundStateCalc = (<any[]>calculations).find(
+    const foundStateCalcAll = (<any[]>calculations).filter(
       (calc) => calc.state === cartRequest.shipping.address.state
     );
 
-    if (foundStateCalc === undefined) {
+    if (foundStateCalcAll.length === 0) {
       return 0;
     }
 
+    let foundStateCalc: any;
     let check = false;
-    if (foundStateCalc.county === undefined && foundStateCalc.city === undefined) {
-      check = true;
-    } else {
-      if (foundStateCalc.city !== undefined) {
-        console.log('found address', found);
-        if (cartRequest.shipping.address.zipCode === foundStateCalc.city) {
-          check = true;
+    for(let foundState of found) {
+      const foundStateCalcCity = (<any[]>foundStateCalcAll).find(
+        (findcity) => 
+          findcity.city === foundState.city 
+      )
+      if(foundStateCalcCity != undefined){
+        if(foundStateCalcCity.hasTax){
+          if(foundStateCalcCity.endsTaxable){
+            check = true;
+            foundStateCalc = foundStateCalcCity;
+            break;
+          }
         }
-      }
-      if (foundStateCalc.county !== undefined) {
-        if (cartRequest.shipping.address.zipCode === foundStateCalc.county) {
-          check = true;
-        }else{
-          console.log('cartRequest', cartRequest);
-          console.log(foundStateCalc.county);
-          console.log(foundStateCalc.city);
+      }else{
+        const foundStateCalcCounty = (<any[]>foundStateCalcAll).find(
+          (findcity) => 
+            findcity.county === foundState.county 
+        )
+        if(foundStateCalcCounty != undefined){
+          if(foundStateCalcCounty.hasTax){
+            if(foundStateCalcCounty.endsTaxable){
+              check = true;
+              foundStateCalc = foundStateCalcCounty;
+              break;
+            }
+          }
         }
       }
     }
-    if (check === true) {
-      console.log(foundStateCalc.hasTax);
-      if (foundStateCalc.hasTax === true) {
-        let productWholesalePrice = 0;//wholosaleRate from product.json;
-        let productRetailPrice = 0;//shopify
-        let productFluidWeight = 0 ;// json
-        let quantity = 0;//shopify
+    //
+     
+    // console.log(check)
+    // console.log(foundStateCalc);
+    if (check) {
+     // console.log(foundStateCalc.hasTax);
+      if (foundStateCalc.hasTax) {
+        let productWholesalePrice = 0; //wholosaleRate from product.json;
+        let productRetailPrice = 0; //shopify
+        let productFluidWeight = 0 ; // json
+        let quantity = 0; //shopify
+       // console.log(foundStateCalc);
+       // console.log(cartRequest.shipping);
+        console.log(cartRequest.cart.products);
+        for(let product of cartRequest.cart.products){
+         // console.log(product);
+          quantity = product.quanity;
+          productWholesalePrice+= products.defaultProductVariant.price * quantity;
+          productRetailPrice+= product.price * quantity;
+          productFluidWeight+= products.defaultProductVariant.fluidweight * quantity;
+        }
 
-          for(let product of products){
-            productWholesalePrice+= product.defaultProductVariant.price * quantity;
-            productRetailPrice+= pricefromShopify * quantity;
-            productFluidWeight+= productLiquidWeight * quantity;
-          }
         if (foundStateCalc.hasWholesaleRate) {
           tax = productWholesalePrice * foundStateCalc.WholesaleRate ;
           return tax;
@@ -72,7 +93,7 @@ export class TaxService {
           tax = productFluidWeight * foundStateCalc.FluidRate;
           return tax;
         }
-        if (foundStateCalc.hasRetailRate ) {
+        if (foundStateCalc.hasRetailRate) {
           tax = productRetailPrice * foundStateCalc.RetailRate ;
           return tax;
         }
