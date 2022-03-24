@@ -15,12 +15,12 @@ export default {
     },
     {
       title: 'Weight in fluid ml',
-      name: 'mls',
+      name: 'fluidWeight',
       type: 'number',
     },
     {
       title: 'Wholesale Price',
-      name: 'wprice',
+      name: 'wholeSalePrice',
       type: 'number',
     },
     {
@@ -36,11 +36,6 @@ export default {
     {
       title: 'Taxable',
       name: 'taxable',
-      type: 'boolean',
-    },
-    {
-      title: 'ENDS Taxable',
-      name: 'isEndsTaxable',
       type: 'boolean',
     },
     {
