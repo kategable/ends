@@ -1,7 +1,5 @@
-import { city } from './../../../../dist/apps/api/assets/data/USCities';
-import { Message } from './../../../../libs/api-interfaces/src/lib/api-interfaces';
 import { NotFoundException } from '@nestjs/common';
-import { Address, CartRequest, Product, Shipping } from '@ends/api-interfaces';
+import { Address, CartRequest, Product } from '@ends/api-interfaces';
 import { SanityDataService } from './sanity-data.service';
 
 import { TaxService } from './tax.service';
