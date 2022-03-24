@@ -5,22 +5,82 @@
     "_rev": "P2xs1IiT75sLhipLc41noL",
     "_type": "calculation",
     "_updatedAt": "2022-03-04T21:48:24Z",
-    "state": "Alabama"
+    "state": "Alabama",
+    "endsTaxable": true
   },
   {
-    "WholesaleRate": 55,
+    "_createdAt": "2022-03-04T21:48:24Z",
+    "_id": "11fdfaa4-7874-4304-9d97-42d513f1eec9",
+    "_rev": "P2xs1IiT75sLhipLc41noL",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:48:24Z",
+    "state": "AZ",
+    "county": "Pinal",
+    "city": "Bapchule",
+    "hasTax": false,
+    "endsTaxable": true
+  },
+  {
+    "wholesaleRate": 20,
+    "_createdAt": "2022-03-04T21:52:53Z",
+    "_id": "a4360ffd-a694-4741-bb1e-9518aed6c08d",
+    "_rev": "P2xs1IiT75sLhipLc42eyT",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:52:53Z",
+    "hasTax": true,
+    "hasWholesaleRate": true,
+    "state": "CA",
+    "county": "Tulare",
+    "endsTaxable": true
+  },
+  {
+    "wholesaleRate": 10,
+    "_createdAt": "2022-03-04T21:52:53Z",
+    "_id": "a4360ffd-a694-4741-bb1e-9518aed6c08d",
+    "_rev": "P2xs1IiT75sLhipLc42eyT",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:52:53Z",
+    "hasTax": true,
+    "hasWholesaleRate": true,
+    "state": "CA",
+    "city": "Alpaugh",
+    "county": "Tulare",
+    "endsTaxable": true
+  },
+  {
+    "wholesaleRate": 20,
+    "fluidRate": 15,
+    "_createdAt": "2022-03-04T21:52:53Z",
+    "_id": "a4360ffd-a694-4741-bb1e-9518aed6c08d",
+    "_rev": "P2xs1IiT75sLhipLc42eyT",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:52:53Z",
+    "hasTax": true,
+    "hasFluidRate": true,
+    "hasWholesaleRate": false,
+    "city": "Coalinga",
+    "state": "CA",
+    "county": "Fresno",
+    "endsTaxable": true
+  },
+  {
+    "wholesaleRate": 55,
+    "retailRate": 20,
     "_createdAt": "2022-03-04T21:49:06Z",
     "_id": "1e0618aa-3834-4c1d-9ed7-6831e04f48c4",
     "_rev": "caobftxRaOyN7ObSyN7HMm",
     "_type": "calculation",
     "_updatedAt": "2022-03-04T21:51:48Z",
-    "city": "Anchorage",
     "hasTax": true,
-    "hasWholesaleRate": true,
-    "state": "Alaska"
+    "hasRetailRate": true,
+    "hasWholesaleRate": false,
+    "city": "Onalaska",
+    "state": "TX",
+    "county": "Polk",
+    "endsTaxable": true
   },
   {
-    "RetailRate": 40,
+    "retailRate": 40,
     "_createdAt": "2022-03-05T04:56:13Z",
     "_id": "5474de3c-7c96-4c10-8300-08b4ae145ca5",
     "_rev": "caobftxRaOyN7ObSyNx3rJ",
@@ -41,7 +101,8 @@
     "city": "Aspen",
     "hasRetailRate": true,
     "hasTax": true,
-    "state": "Colorado"
+    "state": "Colorado",
+    "endsTaxable": true
   },
   {
     "_createdAt": "2022-03-04T21:48:48Z",
@@ -49,10 +110,11 @@
     "_rev": "caobftxRaOyN7ObSyN6jgd",
     "_type": "calculation",
     "_updatedAt": "2022-03-04T21:48:48Z",
-    "state": "Alaska"
+    "state": "Alaska",
+    "endsTaxable": true
   },
   {
-    "RetailRate": 35,
+    "retailRate": 35,
     "_createdAt": "2022-03-04T21:54:08Z",
     "_id": "6456884b-7604-4076-8678-4694b999d3e0",
     "_rev": "caobftxRaOyN7ObSyNwqgL",
@@ -67,10 +129,11 @@
     ],
     "hasTax": true,
     "state": "Colorado",
-    "year": 2022
+    "year": 2022,
+    "endsTaxable": true
   },
   {
-    "WholesaleRate": 56.93,
+    "wholesaleRate": 56.93,
     "_createdAt": "2022-03-04T21:52:53Z",
     "_id": "a4360ffd-a694-4741-bb1e-9518aed6c08d",
     "_rev": "P2xs1IiT75sLhipLc42eyT",
@@ -78,7 +141,8 @@
     "_updatedAt": "2022-03-04T21:52:53Z",
     "hasTax": true,
     "hasWholesaleRate": true,
-    "state": "California"
+    "state": "California",
+    "endsTaxable": true
   },
   {
     "_createdAt": "2022-03-04T21:52:14Z",
@@ -86,11 +150,12 @@
     "_rev": "caobftxRaOyN7ObSyN7KxJ",
     "_type": "calculation",
     "_updatedAt": "2022-03-04T21:52:14Z",
-    "state": "Arizona"
+    "state": "Arizona",
+    "endsTaxable": true
   },
   {
-    "RetailRate": 40,
-    "WholesaleRate": 123,
+    "retailRate": 40,
+    "wholesaleRate": 123,
     "_createdAt": "2022-03-05T04:56:13Z",
     "_id": "drafts.5474de3c-7c96-4c10-8300-08b4ae145ca5",
     "_rev": "pch5h9-akk-tkr-myy-6lyqa2ckh",
@@ -108,15 +173,17 @@
         "_type": "reference"
       }
     ],
-    "city": "Aspen",
+    "city": "Eagle Lake",
     "hasFluidRate": true,
     "hasRetailRate": true,
     "hasTax": true,
+    "endsTaxable": true,
     "hasWholesaleRate": true,
-    "state": "Colorado"
+    "state": "TX",
+    "county": "Colorado"
   },
   {
-    "WholesaleRate": 56.93,
+    "wholesaleRate": 56.93,
     "_createdAt": "2022-03-04T21:52:53Z",
     "_id": "drafts.a4360ffd-a694-4741-bb1e-9518aed6c08d",
     "_rev": "kbqdba-8u1-tms-zis-isze7wqqi",
@@ -138,7 +205,8 @@
     ],
     "hasTax": true,
     "hasWholesaleRate": true,
-    "state": "California"
+    "state": "California",
+    "endsTaxable": true
   },
   {
     "_createdAt": "2022-03-04T21:52:27Z",
@@ -146,6 +214,35 @@
     "_rev": "P2xs1IiT75sLhipLc42bq5",
     "_type": "calculation",
     "_updatedAt": "2022-03-04T21:52:27Z",
-    "state": "Arkansas"
+    "state": "Arkansas",
+    "endsTaxable": true
+  },
+  {
+    "_createdAt": "2022-03-04T21:52:14Z",
+    "_id": "et23f34c8-1aef-428c-9f9a-02cbe03416f4",
+    "_rev": "caobftxRaOyN7ObSyN7KxJ",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-04T21:52:14Z",
+    "city": "Egypt",
+    "state": "TX",
+    "county": "Matagorda",
+    "endsTaxable": true
+  },
+  {
+    "retailRate": 40,
+    "wholesaleRate": 123,
+    "_createdAt": "2022-03-05T04:56:13Z",
+    "_id": "drafts.5474de3c-7c96-4c10-8300-08b4ae145ca5",
+    "_rev": "pch5h9-akk-tkr-myy-6lyqa2ckh",
+    "_type": "calculation",
+    "_updatedAt": "2022-03-08T12:30:43Z",
+    "city": "Altair",
+    "hasFluidRate": true,
+    "hasRetailRate": true,
+    "hasTax": true,
+    "endsTaxable": false,
+    "hasWholesaleRate": true,
+    "state": "TX",
+    "county": "Colorado"
   }
 ]

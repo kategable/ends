@@ -1,110 +1,113 @@
-{
-  "_createdAt": "2018-04-25T10:59:19Z",
-  "_id": "227bbb74-5656-4376-80b3-7424bddc5001",
-  "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
-  "_type": "product",
-  "_updatedAt": "2022-02-25T12:27:17Z",
-  "blurb": {
-    "_type": "localeString",
-    "en": "One of the most fun Kracie kits to make!"
-  },
-  "body": {
-    "_type": "localeBlockContent",
-    "en": [
-      {
-        "_key": "a94b78f6db46",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "a94b78f6db460",
-            "_type": "span",
-            "marks": [],
-            "text": "DIY set Happy Kitchen for making Fast Food candy, with 2 cheeseburgers, French Fries and a drink. Everything is included to make two mini hamburgers, fries, and a drink. All you need is a bit of water and a microwave. The instructions are on the back of the pack in Japanese but just follow the pictures and have fun! Challenge yourself today!   "
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "9920b1ffc97d",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "9920b1ffc97d0",
-            "_type": "span",
-            "marks": [],
-            "text": "Popin' Cookin' is a series of edible DIY candy in funny shapes, that you can easily make yourself by adding water to the ingredients of the package"
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "6ca8c9308700",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "6ca8c93087000",
-            "_type": "span",
-            "marks": [],
-            "text": "Contents: 6x bags of powder with different candy ingredients, 1x spoon, 1x knife, 1x cup, 1x mold."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      },
-      {
-        "_key": "5dc7214683df",
-        "_type": "block",
-        "children": [
-          {
-            "_key": "5dc7214683df0",
-            "_type": "span",
-            "marks": [],
-            "text": "Size of the box: width: 14.5cm (5.7\"), height: 13cm (5.1\"), depth: 4.5cm (1.7\"), incl. instructions with pictures (see also instruction video below), mold can of course be reused."
-          }
-        ],
-        "markDefs": [],
-        "style": "normal"
-      }
-    ]
-  },
-  "categories": [
-    {
-      "_key": "0acb09f21489",
-      "_ref": "1ba26a25-7f35-4d24-804e-09cc76a0cd73",
-      "_type": "reference"
-    }
-  ],
-  "defaultProductVariant": {
-    "_type": "productVariant",
-    "barcode": {
-      "_type": "barcode",
-      "barcode": "4901551354283",
-      "format": "EAN13"
+[
+  {
+    "_createdAt": "2018-04-25T10:59:19Z",
+    "_id": "227bbb74-5656-4376-80b3-7424bddc5001",
+    "SKU": "227bbb74-5656-4376-80b3-7424bddc5001",
+    "_rev": "eT7u6y8UMCGaR5i8FBsfUC",
+    "_type": "product",
+    "_updatedAt": "2022-02-25T12:27:17Z",
+    "blurb": {
+      "_type": "localeString",
+      "en": "One of the most fun Kracie kits to make!"
     },
-    "images": [
-      {
-        "_key": "ly68v3mo",
-        "_type": "image",
-        "asset": {
-          "_ref": "image-76b6b872f92555bcb67d9a2551c75b28e0d90b2e-600x500-png",
-          "_type": "reference"
+    "body": {
+      "_type": "localeBlockContent",
+      "en": [
+        {
+          "_key": "a94b78f6db46",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "a94b78f6db460",
+              "_type": "span",
+              "marks": [],
+              "text": "DIY set Happy Kitchen for making Fast Food candy, with 2 cheeseburgers, French Fries and a drink. Everything is included to make two mini hamburgers, fries, and a drink. All you need is a bit of water and a microwave. The instructions are on the back of the pack in Japanese but just follow the pictures and have fun! Challenge yourself today!   "
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "9920b1ffc97d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "9920b1ffc97d0",
+              "_type": "span",
+              "marks": [],
+              "text": "Popin' Cookin' is a series of edible DIY candy in funny shapes, that you can easily make yourself by adding water to the ingredients of the package"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "6ca8c9308700",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "6ca8c93087000",
+              "_type": "span",
+              "marks": [],
+              "text": "Contents: 6x bags of powder with different candy ingredients, 1x spoon, 1x knife, 1x cup, 1x mold."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "5dc7214683df",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "5dc7214683df0",
+              "_type": "span",
+              "marks": [],
+              "text": "Size of the box: width: 14.5cm (5.7\"), height: 13cm (5.1\"), depth: 4.5cm (1.7\"), incl. instructions with pictures (see also instruction video below), mold can of course be reused."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
         }
+      ]
+    },
+    "categories": [
+      {
+        "_key": "0acb09f21489",
+        "_ref": "1ba26a25-7f35-4d24-804e-09cc76a0cd73",
+        "_type": "reference"
       }
     ],
-    "price": 9.99
-  },
-  "slug": {
-    "_type": "slug",
-    "current": "happy-kitchen-hamburger"
-  },
-  "tags": [
-    "DIY"
-  ],
-  "title": "Happy Kitchen - Hamburger",
-  "vendor": {
-    "_ref": "01ca40b6-e7fd-4676-af25-33f591de51c0",
-    "_type": "reference"
+    "defaultProductVariant": {
+      "_type": "productVariant",
+      "barcode": {
+        "_type": "barcode",
+        "barcode": "4901551354283",
+        "format": "EAN13"
+      },
+      "images": [
+        {
+          "_key": "ly68v3mo",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-76b6b872f92555bcb67d9a2551c75b28e0d90b2e-600x500-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "retailPrice": 10,
+      "wholesalePrice": 2,
+      "fluidweight": 2
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "happy-kitchen-hamburger"
+    },
+    "tags": ["DIY"],
+    "title": "Happy Kitchen - Hamburger",
+    "vendor": {
+      "_ref": "01ca40b6-e7fd-4676-af25-33f591de51c0",
+      "_type": "reference"
+    }
   }
-}
+]
