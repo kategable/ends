@@ -21,7 +21,7 @@
     "endsTaxable": true
   },
   {
-    "WholesaleRate": 20,
+    "wholesaleRate": 20,
     "_createdAt": "2022-03-04T21:52:53Z",
     "_id": "a4360ffd-a694-4741-bb1e-9518aed6c08d",
     "_rev": "P2xs1IiT75sLhipLc42eyT",
@@ -34,7 +34,7 @@
     "endsTaxable": true
   },
   {
-    "WholesaleRate": 10,
+    "wholesaleRate": 10,
     "_createdAt": "2022-03-04T21:52:53Z",
     "_id": "a4360ffd-a694-4741-bb1e-9518aed6c08d",
     "_rev": "P2xs1IiT75sLhipLc42eyT",
@@ -48,8 +48,8 @@
     "endsTaxable": true
   },
   {
-    "WholesaleRate": 20,
-    "FluidRate": 15,
+    "wholesaleRate": 20,
+    "fluidRate": 15,
     "_createdAt": "2022-03-04T21:52:53Z",
     "_id": "a4360ffd-a694-4741-bb1e-9518aed6c08d",
     "_rev": "P2xs1IiT75sLhipLc42eyT",
@@ -64,15 +64,15 @@
     "endsTaxable": true
   },
   {
-    "WholesaleRate": 55,
-    "RetailRate": 20,
+    "wholesaleRate": 55,
+    "retailRate": 20,
     "_createdAt": "2022-03-04T21:49:06Z",
     "_id": "1e0618aa-3834-4c1d-9ed7-6831e04f48c4",
     "_rev": "caobftxRaOyN7ObSyN7HMm",
     "_type": "calculation",
     "_updatedAt": "2022-03-04T21:51:48Z",
     "hasTax": true,
-    "hasRetailRate": true, 
+    "hasRetailRate": true,
     "hasWholesaleRate": false,
     "city": "Onalaska",
     "state": "TX",
@@ -80,7 +80,7 @@
     "endsTaxable": true
   },
   {
-    "RetailRate": 40,
+    "retailRate": 40,
     "_createdAt": "2022-03-05T04:56:13Z",
     "_id": "5474de3c-7c96-4c10-8300-08b4ae145ca5",
     "_rev": "caobftxRaOyN7ObSyNx3rJ",
@@ -114,7 +114,7 @@
     "endsTaxable": true
   },
   {
-    "RetailRate": 35,
+    "retailRate": 35,
     "_createdAt": "2022-03-04T21:54:08Z",
     "_id": "6456884b-7604-4076-8678-4694b999d3e0",
     "_rev": "caobftxRaOyN7ObSyNwqgL",
@@ -133,7 +133,7 @@
     "endsTaxable": true
   },
   {
-    "WholesaleRate": 56.93,
+    "wholesaleRate": 56.93,
     "_createdAt": "2022-03-04T21:52:53Z",
     "_id": "a4360ffd-a694-4741-bb1e-9518aed6c08d",
     "_rev": "P2xs1IiT75sLhipLc42eyT",
@@ -154,8 +154,8 @@
     "endsTaxable": true
   },
   {
-    "RetailRate": 40,
-    "WholesaleRate": 123,
+    "retailRate": 40,
+    "wholesaleRate": 123,
     "_createdAt": "2022-03-05T04:56:13Z",
     "_id": "drafts.5474de3c-7c96-4c10-8300-08b4ae145ca5",
     "_rev": "pch5h9-akk-tkr-myy-6lyqa2ckh",
@@ -173,7 +173,7 @@
         "_type": "reference"
       }
     ],
-    "city": "Eagle Lake", 
+    "city": "Eagle Lake",
     "hasFluidRate": true,
     "hasRetailRate": true,
     "hasTax": true,
@@ -183,7 +183,7 @@
     "county": "Colorado"
   },
   {
-    "WholesaleRate": 56.93,
+    "wholesaleRate": 56.93,
     "_createdAt": "2022-03-04T21:52:53Z",
     "_id": "drafts.a4360ffd-a694-4741-bb1e-9518aed6c08d",
     "_rev": "kbqdba-8u1-tms-zis-isze7wqqi",
@@ -229,8 +229,8 @@
     "endsTaxable": true
   },
   {
-    "RetailRate": 40,
-    "WholesaleRate": 123,
+    "retailRate": 40,
+    "wholesaleRate": 123,
     "_createdAt": "2022-03-05T04:56:13Z",
     "_id": "drafts.5474de3c-7c96-4c10-8300-08b4ae145ca5",
     "_rev": "pch5h9-akk-tkr-myy-6lyqa2ckh",
