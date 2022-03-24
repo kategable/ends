@@ -22,6 +22,7 @@ export class TaxService {
     const foundStateCalcAll = this.dataService.getCalculations(
       cartRequest.shipping.address.state
     );
+    
     const city = validLocation.at(0).city;
     const state = cartRequest.shipping.address.state;
     const county = validLocation[0].county;
