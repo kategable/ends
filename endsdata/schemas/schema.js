@@ -13,7 +13,7 @@ import productVariant from './productVariant'
 import localeString from './locale/String'
 import localeText from './locale/Text'
 import localeBlockContent from './locale/BlockContent'
-import city from './city';
+import location from './location';
 import calculation from './calculation';
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -34,7 +34,7 @@ export default createSchema({
     localeBlockContent,
     localeString,
     productVariant,
-    city,
+    location,
     calculation
   ]),
 })
