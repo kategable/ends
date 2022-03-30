@@ -43,3 +43,4 @@ Thumbs.db
 # sanity
 endsdata1
 endsdata/node_modules
+endsdata/dist

@@ -39,7 +39,6 @@ export class SanityDataService {
   createLocations(cnt: number) { //this is to load zipcode file
     const locations = <Location[]>locationData;
     const states = <State[]>statesData;
-    let i = 1;
     for (let index = 0; index < cnt+1; index++) {
       const location = locations[index];
       const state = states.find(s=>s.code === location.state);
