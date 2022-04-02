@@ -1,3 +1,4 @@
+
 import { State } from './../../../../libs/api-interfaces/src/lib/state';
 import { Calculation, Location, SourceProduct } from '@ends/api-interfaces';
 
@@ -25,7 +26,14 @@ export class SanityDataService {
   }`
     );
   }
+  // async getProductbyId(id: string, clientId: string): Promise<SourceProduct> {
+  //   return await this.sanityClientCredentials
+  //     .getDocument('product-' + id)
+  //     .then((product) => {
 
+  //       return product;
+  //     });
+  // }
   getLocation(zip: number, state: string): Location[] {
     return (<Location[]>locationData).filter(
       (c) => c.zip_code === zip && c.state === state
@@ -36,26 +44,25 @@ export class SanityDataService {
   }
 
   getSourceProduct(product: string) {
+    //return this.getProductbyId(product);
     return (<SourceProduct[]>(<unknown>products)).find((prod) => {
       prod.SKU === product;
     });
   }
-  async createLocations(cnt?: number): number {
+  async createLocations(cnt?: number): Promise<number> {
     //this is to load zipcode file
     const locations = <Location[]>locationData;
     const states = <State[]>statesData;
     if (!cnt) cnt = locations.length;
     this.logger.log(`cnt is ${cnt}`);
- let i = 0;
+    let i = 0;
     for (let index = 0; index < cnt + 1; index++) {
-
       const location = locations[index];
       this.logger.log(`Location, zip is ${location.zip_code}`);
 
       const state = states.find((s) => s.code === location.state);
-      if(!state){
+      if (!state) {
         this.logger.log(`State not found:  ${location.state}`);
-
       }
       const doc: Location = {
         _id: location.zip_code.toString(),
@@ -79,9 +86,7 @@ export class SanityDataService {
         .catch((err) => {
           this.logger.error('Oh no, the update failed: ', err.message);
         });
-
     }
     return i;
-
   }
 }

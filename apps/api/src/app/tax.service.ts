@@ -22,7 +22,7 @@ export class TaxService {
     const foundStateCalcAll = this.dataService.getCalculations(
       cartRequest.shipping.address.state
     );
-    
+
     const city = validLocation.at(0).city;
     const state = cartRequest.shipping.address.state;
     const county = validLocation[0].county;
@@ -51,37 +51,46 @@ export class TaxService {
     return tax;
   }
   private getTax(calc: Calculation, cart: Cart): number {
-    let tax = 0;
+    let taxTotals = 0;
 
+    if (!calc) return 0;
     if (!calc.hasTax && !calc.endsTaxable) return 0;
 
     cart.products.map((cartProduct) => {
+      let tax = false;
       const sourceProduct = this.dataService.getSourceProduct(
         cartProduct.product
       );
+      if (!sourceProduct.isTaxable) return 0;
 
-      if (!sourceProduct.isTaxable) return;
+      calc.catergories.forEach(category=>{
+        if(sourceProduct.categories.includes(category)){
+          tax= true;
+          return;
+        }
+      })
+      if (!tax) return 0;
 
       const productWholesalePrice =
-        sourceProduct.defaultProductVariant.wholesalePrice;
+        sourceProduct.wholesalePrice;
       const productRetailPrice = cartProduct.price;
       const productFluidWeight =
-        sourceProduct.defaultProductVariant.fluidWeight;
+        sourceProduct.fluidWeight;
       const quantity = cartProduct.quanity;
 
       if (calc.hasWholesaleRate) {
-        tax += calc.wholesaleRate * productWholesalePrice * quantity;
+        taxTotals += calc.wholesaleRate * productWholesalePrice * quantity;
       }
       if (calc.hasRetailRate) {
-        tax += calc.retailRate * productRetailPrice * quantity;
+        taxTotals += calc.retailRate * productRetailPrice * quantity;
       }
       if (calc.hasFluidRate) {
         if (productFluidWeight) {
-          tax += calc.fluidRate * productFluidWeight * quantity;
+          taxTotals += calc.fluidRate * productFluidWeight * quantity;
         }
       }
     });
-    return tax;
+    return taxTotals;
     //1. loop through all foundStateCalc (state, city, county)
     //2. if no county and no city => goto #3
     //2.1 if has county

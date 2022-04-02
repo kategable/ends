@@ -9,54 +9,53 @@ export default {
       type: 'string',
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
+      name: 'clientId',
+      title: 'Client Id',
+      type: 'string',
     },
     {
-      title: 'Default variant',
-      name: 'defaultProductVariant',
-      type: 'productVariant',
+      title: 'Weight in grams',
+      name: 'grams',
+      type: 'number',
     },
     {
-      title: 'Variants',
-      name: 'variants',
+      title: 'Weight in fluid ml',
+      name: 'fluidWeight',
+      type: 'number',
+    },
+    {
+      title: 'Wholesale Price',
+      name: 'wholeSalePrice',
+      type: 'number',
+    },
+    {
+      title: 'SKU',
+      name: 'sku',
+      type: 'string',
+    },
+    {
+      title: 'Taxable',
+      name: 'taxable',
+      type: 'boolean',
+    },
+    {
+      name: 'images',
+      title: 'Images',
       type: 'array',
       of: [
         {
-          title: 'Variant',
-          type: 'productVariant',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
         },
       ],
-    },
-     
-    {
-      title: 'Tags',
-      name: 'tags',
-      type: 'array',
-      of: [
-        {
-          type: 'string',
-        },
-      ],
-      options: {
-        layout: 'tags',
-      },
     },
     {
       name: 'vendor',
       title: 'Vendor',
       type: 'reference',
       to: {type: 'vendor'},
-    },
-    {
-      name: 'blurb',
-      title: 'Blurb',
-      type: 'localeString',
     },
     {
       name: 'categories',
@@ -69,18 +68,5 @@ export default {
         },
       ],
     },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'localeBlockContent',
-    },
-  ],
-
-  preview: {
-    select: {
-      title: 'title',
-      manufactor: 'manufactor.title',
-      media: 'defaultProductVariant.images[0]',
-    },
-  },
+  ]
 }

@@ -15,4 +15,10 @@ describe('SanityDataService', () => {
     await service.createLocations()
     expect(true).toBeTruthy();
   },10000);
+
+  // it('should  get product by id ', async (done) => {
+  //   jest.setTimeout(200000)
+  //   let product  =  service.getProductbyId("7554590867680")
+  //   expect(product).toBeTruthy();
+  // },10000);
 });

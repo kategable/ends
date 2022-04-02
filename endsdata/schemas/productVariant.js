@@ -24,11 +24,6 @@ export default {
       type: 'number',
     },
     {
-      title: 'Price',
-      name: 'price',
-      type: 'number',
-    },
-    {
       title: 'SKU',
       name: 'sku',
       type: 'string',
@@ -50,11 +45,6 @@ export default {
           },
         },
       ],
-    },
-    {
-      title: 'Bar code',
-      name: 'barcode',
-      type: 'barcode',
-    },
+    }
   ],
 }

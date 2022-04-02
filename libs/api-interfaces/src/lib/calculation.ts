@@ -15,4 +15,5 @@ export interface Calculation {
   county: string;
   city: string;
   endsTaxable: boolean;
+  catergories: string[];
 }

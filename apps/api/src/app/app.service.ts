@@ -26,7 +26,7 @@ export class AppService {
   getProducts() {
     // return this.dataService.getProducts();
   }
-  loadLocations(): number {
-    return this.dataService.createLocations();
+  async loadLocations(): Promise<number> {
+    return await  this.dataService.createLocations();
   }
 }
