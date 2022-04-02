@@ -3,6 +3,8 @@ export default {
   type: 'document',
   title: 'ENDS Excise Tax Calculation',
   fields: [
+    { name: 'title', type: 'string', title: 'Title' },
+    { name: 'description', type: 'text', title: 'Description' },
     { name: 'state', type: 'string', title: 'State' },
     { name: 'city', type: 'string', title: 'City' },
     { name: 'county', type: 'string', title: 'County' },

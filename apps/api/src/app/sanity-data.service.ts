@@ -1,7 +1,7 @@
 import { State } from './../../../../libs/api-interfaces/src/lib/state';
 import { Calculation, Location, SourceProduct } from '@ends/api-interfaces';
 
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { client } from './service/client';
 
 import locationData from '../assets/data/USCities.json';
@@ -12,7 +12,11 @@ import statesData from '../assets/data/states.json';
 @Injectable()
 export class SanityDataService {
   sanityClientCredentials = client;
+  logger: Logger;
 
+  constructor() {
+    this.logger = new Logger();
+  }
   async getProducts() {
     return await this.sanityClientCredentials.fetch(
       `*[_type == "product"]{
@@ -36,32 +40,48 @@ export class SanityDataService {
       prod.SKU === product;
     });
   }
-  createLocations(cnt: number) { //this is to load zipcode file
+  async createLocations(cnt?: number): number {
+    //this is to load zipcode file
     const locations = <Location[]>locationData;
     const states = <State[]>statesData;
-    for (let index = 0; index < cnt+1; index++) {
+    if (!cnt) cnt = locations.length;
+    this.logger.log(`cnt is ${cnt}`);
+ let i = 0;
+    for (let index = 0; index < cnt + 1; index++) {
+
       const location = locations[index];
-      const state = states.find(s=>s.code === location.state);
-      const doc = {
+      this.logger.log(`Location, zip is ${location.zip_code}`);
+
+      const state = states.find((s) => s.code === location.state);
+      if(!state){
+        this.logger.log(`State not found:  ${location.state}`);
+
+      }
+      const doc: Location = {
         _id: location.zip_code.toString(),
         _type: 'location',
         city: location.city,
         county: location.county,
         zip_code: location.zip_code,
+        title: `${location.zip_code} - ${location.state} - ${location.county} - ${location.city}`,
         latitude: location.latitude,
         longitude: location.longitude,
-        stateCode: state,
-        stateName: location.state,
-
-
+        stateCode: location.state,
+        state: state?.name,
       };
 
-      client.createIfNotExists (doc).then((res) => {
-        console.log(`Location was created, document ID is ${res._id}`);
-      }).catch((err) => {
-        console.error('Oh no, the update failed: ', err.message)
-      });
-      return;
+      await client
+        .createOrReplace(doc)
+        .then((res) => {
+          this.logger.log(`Location was created, document ID is ${res._id}`);
+          i++;
+        })
+        .catch((err) => {
+          this.logger.error('Oh no, the update failed: ', err.message);
+        });
+
     }
+    return i;
+
   }
 }

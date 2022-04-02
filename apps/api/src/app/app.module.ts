@@ -1,3 +1,4 @@
+import { SanityDataService } from './sanity-data.service';
 import { Module } from '@nestjs/common';
 
 import { AppController } from './app.controller';
@@ -7,6 +8,6 @@ import { TaxService } from './tax.service';
 @Module({
   imports: [],
   controllers: [AppController],
-  providers: [AppService,TaxService],
+  providers: [AppService,TaxService, SanityDataService],
 })
 export class AppModule {}

@@ -1,9 +1,10 @@
 export default {
-  name: 'locations',
+  name: 'location',
   type: 'document',
   title: 'Location',
   fields: [
-    { name: 'stateName', type: 'string', title: 'State Name' },
+    { name: 'title', type: 'string', title: 'Title' },
+    { name: 'state', type: 'string', title: 'State Name' },
     { name: 'stateCode', type: 'string', title: 'State Code' },
     { name: 'zip_code', type: 'number', title: 'ZipCode' },
     { name: 'city', type: 'string', title: 'City' },

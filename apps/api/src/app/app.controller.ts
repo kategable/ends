@@ -30,5 +30,9 @@ export class AppController {
      return await this.appService.getProducts();
   }
 
+  @Get('locations')
+  async loadLocations() {
+     return await this.appService.loadLocations();
+  }
 
 }
