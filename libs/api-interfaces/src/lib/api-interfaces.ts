@@ -8,18 +8,18 @@ export class CartRequest {
   @ApiProperty({
     type: String,
     example: 'adasd-asd-asd-asd',
-    description: 'Registered ShopId',
+    description: 'Registered ClientId',
   })
-  shopId: string;
+  clientId: string;
   @ApiProperty({
     example: {
-      products: [{ product: '123', price: 12.99, quanity: 1 }],
+      products: [{ product: '123', price: 12.99, quantity: 1 }],
     },
     description: 'Cart details',
   })
   cart: Cart;
   @ApiProperty({
-    example: { address: {state: 'IL', zipCode: '60030'} },
+    example: { address: { state: 'IL', zipCode: '60030' } },
     description: 'Shipping details',
   })
   shipping: Shipping;
@@ -46,9 +46,9 @@ export class Product {
   @ApiProperty({
     type: String,
     example: '2',
-    description: 'Product Quanity',
+    description: 'Product quantity',
   })
-  quanity: number;
+  quantity: number;
 }
 export interface Cart {
   products: Product[];

@@ -1,5 +1,5 @@
 import { Injectable, Logger, NotFoundException } from '@nestjs/common';
-import { CartRequest, Calculation, Cart } from '@ends/api-interfaces';
+import { CartRequest, Calculation } from '@ends/api-interfaces';
 
 import { SanityDataService } from './sanity-data.service';
 @Injectable()
@@ -8,88 +8,104 @@ export class TaxService {
   constructor(private readonly dataService: SanityDataService) {
     this.logger = new Logger();
   }
-  culculate(cartRequest: CartRequest): number {
+  async culculate(cartRequest: CartRequest): Promise<number> {
     let tax = 0;
     //match address
-    const validLocation = this.dataService.getLocation(
-      +cartRequest.shipping.address.zipCode,
-      cartRequest.shipping.address.state
+    const validLocations = await this.dataService.getLocations(
+      +cartRequest.shipping.address.zipCode
     );
-    if (validLocation.length === 0) {
+
+    if (!validLocations?.length) {
       throw new NotFoundException('no address found');
     }
     //read calcs for this state
-    const foundStateCalcAll = this.dataService.getCalculations(
-      cartRequest.shipping.address.state
+    const foundStateCalcAll = await this.dataService.getCalculations(
+      validLocations.at(0).state
     );
 
-    const city = validLocation.at(0).city;
-    const state = cartRequest.shipping.address.state;
-    const county = validLocation[0].county;
+    const city = validLocations.at(0).city;
+    const state = validLocations.at(0).state;
+    const county = validLocations.at(0).county;
 
     if (foundStateCalcAll.length === 0) {
       return 0;
     }
     foundStateCalcAll.map((calc) => {
       let isTaxable = false;
-      if (calc.city === city) {
+      let calcApplied = false;
+
+      if (calc?.city === city) {
         //calculate tax for each product for city
         isTaxable = true;
+        calcApplied = true;
       }
-      if (calc.county === county) {
-        //calculate tax for each product for county
-        isTaxable = true;
+      calcApplied = calcApplied ? true : calc?.city?.length > 0;
+
+      if (!calcApplied) {
+        if (calc?.county === county && !isTaxable) {
+          //calculate tax for each product for county
+          isTaxable = true;
+          calcApplied = true;
+        }
       }
-      if (calc.state === state) {
-        //calculate tax for each product for state
-        isTaxable = true;
+      calcApplied = calcApplied ? true : calc?.county?.length > 0;
+      if (!calcApplied) {
+        if (calc?.state === state && !isTaxable) {
+          //calculate tax for each product for state
+          isTaxable = true;
+        }
       }
       if (isTaxable) {
-        tax += this.getTax(calc, cartRequest.cart);
+        tax += this.getTax(calc, cartRequest);
+        console.log('tax', tax);
       }
     });
     return tax;
   }
-  private getTax(calc: Calculation, cart: Cart): number {
+  private getTax(calc: Calculation, cartRequest: CartRequest): number {
     let taxTotals = 0;
 
     if (!calc) return 0;
-    if (!calc.hasTax && !calc.endsTaxable) return 0;
+    if (!calc.hasTax) return 0;
 
-    cart.products.map((cartProduct) => {
-      let tax = false;
-      const sourceProduct = this.dataService.getSourceProduct(
-        cartProduct.product
+    cartRequest.cart.products.forEach(async (cartProduct) => {
+      //let tax = false;
+      const sourceProducts = await this.dataService.getSourceProduct(
+        cartProduct.product,
+        cartRequest.clientId
       );
-      if (!sourceProduct.isTaxable) return 0;
+      const sourceProduct = sourceProducts.at(0);
 
-      calc.catergories.forEach(category=>{
-        if(sourceProduct.categories.includes(category)){
-          tax= true;
-          return;
-        }
-      })
-      if (!tax) return 0;
+      if (!sourceProduct) return 0;
 
-      const productWholesalePrice =
-        sourceProduct.wholesalePrice;
+      //TODO: need a category lookup
+      // calc.catergories.forEach((category) => {
+      //   if (sourceProduct.categories.includes(category)) {
+      //     tax = true;
+      //     return;
+      //   }
+      // });
+      // if (!tax) return 0;
+
+      const productWholesalePrice = sourceProduct.wholesalePrice | 0;
       const productRetailPrice = cartProduct.price;
-      const productFluidWeight =
-        sourceProduct.fluidWeight;
-      const quantity = cartProduct.quanity;
+      const productFluidWeight = sourceProduct.fluidWeight | 0;
+      const quantity = cartProduct.quantity;
 
       if (calc.hasWholesaleRate) {
-        taxTotals += calc.wholesaleRate * productWholesalePrice * quantity;
+        taxTotals +=
+          ((calc.wholesaleRate * productWholesalePrice) / 100) * quantity;
       }
       if (calc.hasRetailRate) {
-        taxTotals += calc.retailRate * productRetailPrice * quantity;
+        taxTotals += ((calc.retailRate * productRetailPrice) / 100) * quantity;
       }
       if (calc.hasFluidRate) {
         if (productFluidWeight) {
-          taxTotals += calc.fluidRate * productFluidWeight * quantity;
+          taxTotals += ((calc.fluidRate * productFluidWeight) / 100) * quantity;
         }
       }
     });
+    console.log(taxTotals);
     return taxTotals;
     //1. loop through all foundStateCalc (state, city, county)
     //2. if no county and no city => goto #3

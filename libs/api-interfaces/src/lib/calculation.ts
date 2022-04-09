@@ -4,16 +4,15 @@ export interface Calculation {
   _rev: string;
   _type: string;
   _updatedAt: string;
+  catergories: string[];
+  city: string;
+  county: string;
+  fluidRate: number,
+  hasFluidRate: boolean,
+  hasRetailRate: boolean,
   hasTax: boolean;
   hasWholesaleRate: boolean;
-  wholesaleRate: number;
-  hasRetailRate: boolean,
   retailRate: number,
-  hasFluidRate: boolean,
-  fluidRate: number,
   state: string;
-  county: string;
-  city: string;
-  endsTaxable: boolean;
-  catergories: string[];
+  wholesaleRate: number;
 }

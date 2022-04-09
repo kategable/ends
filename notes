@@ -1,0 +1,13 @@
+count(*[_type == 'location'])
+*[_id == "product.123"] // _id equals
+
+*[_type == "product" && sku =='7554590900441']
+
+
+*[_type=="product" && sku =='7554590900441']{
+  title,sku,categories,
+  "categoriesref": *[_type=='category' && references(^.categories._id)]{ title }
+}
+
+
+

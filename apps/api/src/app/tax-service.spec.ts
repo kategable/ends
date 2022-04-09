@@ -1,8 +1,9 @@
 import { NotFoundException } from '@nestjs/common';
-import { Address, CartRequest, Product } from '@ends/api-interfaces';
+import { Address, Cart, CartRequest, Product } from '@ends/api-interfaces';
 import { SanityDataService } from './sanity-data.service';
 
 import { TaxService } from './tax.service';
+jest.useFakeTimers();
 
 fdescribe('TaxService', () => {
   let service: TaxService;
@@ -27,33 +28,30 @@ fdescribe('TaxService', () => {
     expect(result).toEqual(0);
   });
 
-  it('should return zero if city in calaculations doesnt match this city', () => {
-    let request = new CartRequest();
-    let address = new Address();
-    let product = new Product();
-    product = { product: '123', price: 10.99, quanity: 1 };
-    request.shopId = '1234566';
-    let products = [];
-    products.push(product);
-    request.shopId = '1234566';
-    request.cart = { products: [product] };
-    request.total = 24.98;
-    address.zipCode = '77435';
-    address.state = 'TX';
-    request.shipping = { address: address };
-    const result = service.culculate(request);
-    // Done
-    expect(result).toEqual(0);
+  it('should return $35 for Colorado State 35% retail tax', () => {
+    const products = [
+      { product: '7554590900441', price: 100, quantity: 1 } as Product,
+    ];
+
+    const request = {
+      clientId: '123',
+      cart: { products } as Cart,
+      shipping: { address: { zipCode: '80001' } as Address },
+    } as CartRequest;
+
+    service.culculate(request).then((data) => {
+      expect(data).toBe(35);
+    });
   });
   it('should return zero if county in calaculations doesnt match this county', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    product = { product: '123', price: 10.99, quanity: 1 };
-    request.shopId = '1234566';
+    product = { product: '123', price: 10.99, quantity: 1 };
+    request.clientId = '1234566';
     let products = [];
     products.push(product);
-    request.shopId = '1234566';
+    request.clientId = '1234566';
     request.cart = { products: [product] };
     request.total = 24.98;
     address.zipCode = '77435';
@@ -67,11 +65,11 @@ fdescribe('TaxService', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    product = { product: '123', price: 10.99, quanity: 1 };
-    request.shopId = '1234566';
+    product = { product: '123', price: 10.99, quantity: 1 };
+    request.clientId = '1234566';
     let products = [];
     products.push(product);
-    request.shopId = '1234566';
+    request.clientId = '1234566';
     request.cart = { products: [product] };
     request.total = 24.98;
     address.zipCode = '85221';
@@ -85,11 +83,11 @@ fdescribe('TaxService', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    product = { product: '123', price: 10.99, quanity: 1 };
-    request.shopId = '1234566';
+    product = { product: '123', price: 10.99, quantity: 1 };
+    request.clientId = '1234566';
     let products = [];
     products.push(product);
-    request.shopId = '1234566';
+    request.clientId = '1234566';
     request.cart = { products: [product] };
     request.total = 24.98;
     address.zipCode = '77412';
@@ -100,12 +98,16 @@ fdescribe('TaxService', () => {
     expect(result).toEqual(0);
   });
   it('should return 109.9 if calaculation hasWholesaleRate==true', () => {
-    let request = new CartRequest();
-    let address = new Address();
+    const request = new CartRequest();
+    const address = new Address();
     let product = new Product();
-    product = { product: '123', price: 10.99, quanity: 1 };
-    request.shopId = '1234566';
-    let products = [];
+    product = {
+      product: '227bbb74-5656-4376-80b3-7424bddc5001',
+      price: 30,
+      quantity: 1,
+    };
+    request.clientId = '1234566';
+    const products = [];
     products.push(product);
     request.cart = { products: products };
     request.total = 24.98;
@@ -120,8 +122,8 @@ fdescribe('TaxService', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    product = { product: '123', price: 12.99, quanity: 3 };
-    request.shopId = '1234566';
+    product = { product: '123', price: 12.99, quantity: 3 };
+    request.clientId = '1234566';
     let products = [];
     products.push(product);
     request.cart = { products: products };
@@ -136,8 +138,8 @@ fdescribe('TaxService', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    product = { product: '123', price: 15.99, quanity: 1 };
-    request.shopId = '1234566';
+    product = { product: '123', price: 15.99, quantity: 1 };
+    request.clientId = '1234566';
     let products = [];
     products.push(product);
     request.cart = { products: products };
@@ -153,8 +155,8 @@ fdescribe('TaxService', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    product = { product: '123', price: 10.99, quanity: 1 };
-    request.shopId = '1234566';
+    product = { product: '123', price: 10.99, quantity: 1 };
+    request.clientId = '1234566';
     let products = [];
     products.push(product);
     request.cart = { products: products };
@@ -168,8 +170,8 @@ fdescribe('TaxService', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    product = { product: '123', price: 10.99, quanity: 1 };
-    request.shopId = '1234566';
+    product = { product: '123', price: 10.99, quantity: 1 };
+    request.clientId = '1234566';
     let products = [];
     products.push(product);
     request.cart = { products: products };
@@ -183,8 +185,8 @@ fdescribe('TaxService', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    product = { product: '123', price: 10.99, quanity: 1 };
-    request.shopId = '1234566';
+    product = { product: '123', price: 10.99, quantity: 1 };
+    request.clientId = '1234566';
     let products = [];
     products.push(product);
     request.cart = { products: products };
@@ -198,8 +200,8 @@ fdescribe('TaxService', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    product = { product: '123', price: 10.99, quanity: 1 };
-    request.shopId = '1234566';
+    product = { product: '123', price: 10.99, quantity: 1 };
+    request.clientId = '1234566';
     let products = [];
     products.push(product);
     request.cart = { products: products };
@@ -213,8 +215,8 @@ fdescribe('TaxService', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    product = { product: '123', price: 10.99, quanity: 1 };
-    request.shopId = '1234566';
+    product = { product: '123', price: 10.99, quantity: 1 };
+    request.clientId = '1234566';
     let products = [];
     products.push(product);
     request.cart = { products: products };
@@ -228,8 +230,8 @@ fdescribe('TaxService', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    product = { product: '123', price: 10.99, quanity: 1 };
-    request.shopId = '1234566';
+    product = { product: '123', price: 10.99, quantity: 1 };
+    request.clientId = '1234566';
     let products = [];
     products.push(product);
     request.cart = { products: products };
@@ -243,8 +245,8 @@ fdescribe('TaxService', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    product = { product: '123', price: 12.99, quanity: 1 };
-    request.shopId = '1234566';
+    product = { product: '123', price: 12.99, quantity: 1 };
+    request.clientId = '1234566';
     let products = [];
     products.push(product);
     request.cart = { products: products };
@@ -258,11 +260,11 @@ fdescribe('TaxService', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    request.shopId = '1234566';
-    product = { product: '123', price: 10.99, quanity: 1 };
+    request.clientId = '1234566';
+    product = { product: '123', price: 10.99, quantity: 1 };
     let products = [];
     products.push(product);
-    product = { product: '23567', price: 13.99, quanity: 2 };
+    product = { product: '23567', price: 13.99, quantity: 2 };
     products.push(product);
     request.cart = { products: products };
     address.zipCode = '93201';
@@ -271,12 +273,12 @@ fdescribe('TaxService', () => {
     const result = service.culculate(request);
     expect(result).toEqual(329.7);
   });
-  it('should return 19.99 if 1 product quanity 2 in cart hasWholesaleRate==true', () => {
+  it('should return 19.99 if 1 product quantity 2 in cart hasWholesaleRate==true', () => {
     let request = new CartRequest();
     let address = new Address();
     let product = new Product();
-    product = { product: '123', price: 10.99, quanity: 2 };
-    request.shopId = '1234566';
+    product = { product: '123', price: 10.99, quantity: 2 };
+    request.clientId = '1234566';
     let products = [];
     products.push(product);
     request.cart = { products: products };
@@ -291,9 +293,9 @@ function mockCart() {
   const request = new CartRequest();
   const address = new Address();
   const product = new Product();
-  product[0] = { product: '123', price: 2, quanity: 1 };
-  product[1] = { product: '12356', price: 3, quanity: 2 };
-  request.shopId = '1234566';
+  product[0] = { product: '123', price: 2, quantity: 1 };
+  product[1] = { product: '12356', price: 3, quantity: 2 };
+  request.clientId = '1234566';
   request.cart = { products: [product] };
   request.total = 24.98;
   address.zipCode = '60030';

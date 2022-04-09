@@ -32,7 +32,7 @@ export class AppController {
 
   @Get('locations')
   async loadLocations() {
-     return await this.appService.loadLocations();
+     return await this.appService.getLocations();
   }
 
 }

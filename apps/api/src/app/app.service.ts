@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { CartRequest, Message } from '@ends/api-interfaces';
+import { CartRequest, Message, Location } from '@ends/api-interfaces';
 import { TaxService } from './tax.service';
 import { SanityDataService } from './sanity-data.service';
 // This import style requires "esModuleInterop", see "side notes"
@@ -15,9 +15,11 @@ export class AppService {
     console.log('order saved', cartRequest);
     return 123;
   }
-  culculate(cartRequest: CartRequest): number {
+  async culculate(cartRequest: CartRequest): Promise<number> {
     console.log('cartRequest', cartRequest);
-    const tax = this.taxService.culculate(cartRequest);
+    const tax = await this.taxService.culculate(cartRequest);
+    console.log('tax', tax);
+
     return tax;
   }
   getData(): Message {
@@ -27,6 +29,10 @@ export class AppService {
     // return this.dataService.getProducts();
   }
   async loadLocations(): Promise<number> {
-    return await  this.dataService.createLocations();
+    return await this.dataService.createLocations();
+  }
+
+  async getLocations(): Promise<Location[]> {
+    return await this.dataService.getLocations(60030);
   }
 }

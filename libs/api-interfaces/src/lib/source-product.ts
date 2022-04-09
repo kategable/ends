@@ -1,5 +1,5 @@
 export interface SourceProduct {
-  isTaxable: boolean;
+  taxable: boolean;
   _createdAt: string;
   _id: string;
   SKU: string;

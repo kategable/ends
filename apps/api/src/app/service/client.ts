@@ -9,5 +9,5 @@ export const client = sanityClient({
   apiVersion: '2022-03-04', // use current UTC date - see "specifying API version"!
   token: 'skxQMz7O9hNQqbAI3jp6H8Uq3XAveXZMYXsfJQeNvjXe5LLZVToBMhvAz9rOpeZDANldZjy269YiNOWXe95YXATwrt77LQXzMzRgXDPQnYel9dd8DhdwBXUZ0w8ZS8mZcMLaSv3AOT9WZ79AORNwDYKpIPTsdY266fbVeGfcJQNmsJYHPNYm',
    // or leave blank for unauthenticated usage
-  useCdn: true, // `false` if you want to ensure fresh data
+  useCdn: false, // `false` if you want to ensure fresh data
 })
