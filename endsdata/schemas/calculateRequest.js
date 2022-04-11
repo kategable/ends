@@ -3,6 +3,8 @@ export default {
   type: 'document',
   title: 'Tax Calculation Request',
   fields: [
+    { name: 'title', type: 'string', title: 'Request Title' },
+    { name: 'clientId', type: 'string', title: 'Client Id' },
     { name: 'data', type: 'string', title: 'Data' },
     { name: 'result', type: 'number', title: 'Tax' },
     {

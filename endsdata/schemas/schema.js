@@ -16,6 +16,7 @@ import localeBlockContent from './locale/BlockContent'
 import location from './location';
 import calculation from './calculation';
 import calculateRequest from './calculateRequest';
+import client from './client';
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -37,6 +38,7 @@ export default createSchema({
   //  productVariant,
     location,
     calculation,
-    calculateRequest
+    calculateRequest,
+    client
   ]),
 })

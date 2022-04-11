@@ -1,3 +1,4 @@
+import { client } from './service/client';
 import { Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { CartRequest, Calculation, SourceProduct } from '@ends/api-interfaces';
 
@@ -10,15 +11,16 @@ export class TaxService {
   }
   async culculate(cartRequest: CartRequest): Promise<number> {
     let tax = 0;
-    await this.dataService.saveCalculateRequest(cartRequest);
+
+    await this.checkClient(cartRequest);
+
     //match address
     const validLocations = await this.dataService.getLocations(
       +cartRequest.shipping.address.zipCode
     );
 
     if (!validLocations?.length) {
-       await this.dataService.saveRequest('no address found');
-      throw new NotFoundException('no address found');
+      await this.noZipFound(cartRequest);
     }
     //read calcs for this state
     const foundStateCalcAll = await this.dataService.getCalculations(
@@ -30,7 +32,7 @@ export class TaxService {
     const county = validLocations.at(0).county;
 
     if (foundStateCalcAll.length === 0) {
-      return 0;
+      return this.logAndReturn(0);
     }
     await Promise.all(
       foundStateCalcAll.map(async (calc) => {
@@ -67,7 +69,13 @@ export class TaxService {
                 cartProduct.product,
                 cartRequest.clientId
               );
+              if (ss.length === 0) {
+                await this.dataService.saveRequestLogs(
+                  `no product source found for: ${cartProduct.product}`
+                );
+              }
               const sourceProduct = ss.at(0);
+
               const titles = sourceProduct.categories.map((ca) => ca.title);
 
               calc.categories.map((category) => {
@@ -77,18 +85,36 @@ export class TaxService {
               });
             })
           );
-          console.log(cartRequest.cart.products);
+
           if (sourceProducts.length > 0) {
             tax += this.getTax(calc, cartRequest, sourceProducts);
-          } else {
-            this.logger.log(
-              'no source products for:',
-              cartRequest.cart.products
-            );
           }
         }
       })
     );
+    return this.logAndReturn(tax);
+  }
+  private async noZipFound(cartRequest: CartRequest) {
+    const msg = `no location found for zip: ${cartRequest.shipping.address.zipCode}`;
+    await this.dataService.saveRequestLogs(msg);
+    throw new NotFoundException(msg);
+  }
+
+  private async checkClient(cartRequest: CartRequest) {
+    await this.dataService.saveCalculateRequest(cartRequest);
+    const client = await this.dataService.checkClient(cartRequest.clientId);
+    if (client.length === 0) {
+      await this.dataService.saveRequestLogs('no client found');
+      throw new NotFoundException('client is not found');
+    }
+    if (!client[0].valid) {
+      await this.dataService.saveRequestLogs('client is not valid');
+      throw new NotFoundException('client is not valid');
+    }
+  }
+
+  async logAndReturn(tax: number): Promise<number> {
+    await this.dataService.saveRequestTotal(tax);
     this.logger.log('final', tax);
     return tax;
   }
