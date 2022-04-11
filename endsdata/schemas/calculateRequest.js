@@ -5,7 +5,7 @@ export default {
   fields: [
     { name: 'title', type: 'string', title: 'Request Title' },
     { name: 'clientId', type: 'string', title: 'Client Id' },
-    { name: 'data', type: 'string', title: 'Data' },
+    { name: 'data', type: 'text', title: 'Data' },
     { name: 'result', type: 'number', title: 'Tax' },
     {
       name: 'logs',
@@ -13,7 +13,7 @@ export default {
       type: 'array',
       of: [
         {
-          type: 'string',
+          type: 'text',
         },
       ],
     },

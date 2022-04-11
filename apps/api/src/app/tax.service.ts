@@ -18,10 +18,9 @@ export class TaxService {
     const validLocations = await this.dataService.getLocations(
       +cartRequest.shipping.address.zipCode
     );
+    await this.zipCheck(validLocations, cartRequest);
 
-    if (!validLocations?.length) {
-      await this.noZipFound(cartRequest);
-    }
+
     //read calcs for this state
     const foundStateCalcAll = await this.dataService.getCalculations(
       validLocations.at(0).state
@@ -94,10 +93,17 @@ export class TaxService {
     );
     return this.logAndReturn(tax);
   }
-  private async noZipFound(cartRequest: CartRequest) {
-    const msg = `no location found for zip: ${cartRequest.shipping.address.zipCode}`;
+  async zipCheck(validLocations:  Location[], cartRequest: CartRequest) {
+
+   if(validLocations.length === 0)
+    {
+      const msg = `no location found for zip: ${cartRequest.shipping.address.zipCode}`;
+      await this.dataService.saveRequestLogs(msg);
+      throw new NotFoundException(msg);
+    }
+    const msg = ` locations found for zip: ${cartRequest.shipping.address.zipCode}  : ${JSON.stringify(validLocations)}`;
     await this.dataService.saveRequestLogs(msg);
-    throw new NotFoundException(msg);
+
   }
 
   private async checkClient(cartRequest: CartRequest) {
@@ -111,11 +117,13 @@ export class TaxService {
       await this.dataService.saveRequestLogs('client is not valid');
       throw new NotFoundException('client is not valid');
     }
+    await this.dataService.saveRequestLogs('client is valid');
+
   }
 
   async logAndReturn(tax: number): Promise<number> {
+    await this.dataService.saveRequestLogs(`final tax calculated: ${tax}`);
     await this.dataService.saveRequestTotal(tax);
-    this.logger.log('final', tax);
     return tax;
   }
   getTax(

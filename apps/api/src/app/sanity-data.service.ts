@@ -73,7 +73,8 @@ export class SanityDataService {
   async saveRequestLogs(log: string) {
     await client
       .patch(`${this.requestId}`)
-      .set({ logs: [log] })
+      .setIfMissing({ logs: [] })
+      .insert('after', 'logs[-1]', [log])
       .commit()
       .then((res) => {
         this.logger.log(`Request was updated, document ID is ${res._id}`);
@@ -97,9 +98,9 @@ export class SanityDataService {
       });
   }
   async checkClient(clientId: string): Promise<any> {
-    return await this.sanityClientCredentials
-      .fetch(`*[_type=="client" && clientId =='${clientId}']`);
-
+    return await this.sanityClientCredentials.fetch(
+      `*[_type=="client" && clientId =='${clientId}']`
+    );
   }
   async createLocations(cnt?: number): Promise<number> {
     //this is to load zipcode file
