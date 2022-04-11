@@ -8,7 +8,9 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "heroku-postbuild": "nx build $PROJECT_NAME --prod"
+    "heroku-postbuild": "nx build $PROJECT_NAME --prod",
+    "sanity-start":"cd endsdata; sanity start;",
+    "api-start":"nx serve api"
   },
   "private": true,
   "dependencies": {

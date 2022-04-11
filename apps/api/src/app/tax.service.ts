@@ -1,4 +1,3 @@
-
 import { Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { CartRequest, Calculation, SourceProduct } from '@ends/api-interfaces';
 
@@ -58,47 +57,50 @@ export class TaxService {
       }
       if (isTaxable) {
         const sourceProducts = [];
-        cartRequest.cart.products.forEach(async (cartProduct) => {
-          //let tax = false;
-          const ss = await this.dataService.getSourceProduct(
-            cartProduct.product,
-            cartRequest.clientId
-          );
-          const sourceProduct = ss.at(0);
-          sourceProducts.push(sourceProduct);
-        });
-        tax += await this.getTax(calc, cartRequest, sourceProducts);
-        console.log('tax', tax);
+        await Promise.all(
+          cartRequest.cart.products.map(async (cartProduct) => {
+            //let tax = false;
+            const ss = await this.dataService.getSourceProduct(
+              cartProduct.product,
+              cartRequest.clientId
+            );
+            const sourceProduct = ss.at(0);
+            const titles = sourceProduct.categories.map((ca) => ca.title);
+
+            calc.categories.map((category) => {
+              if (titles.includes(category.title)) {
+                sourceProducts.push(sourceProduct);
+              }
+            });
+          })
+        );
+        console.log(cartRequest.cart.products);
+        if (sourceProducts.length > 0) {
+          tax += this.getTax(calc, cartRequest, sourceProducts);
+        } else {
+          this.logger.log('no source products for:', cartRequest.cart.products);
+        }
       }
     });
     return tax;
   }
-  async getTax(
+  getTax(
     calc: Calculation,
     cartRequest: CartRequest,
     sourceProducts: SourceProduct[]
-  ): Promise<number> {
+  ): number {
     let taxTotals = 0;
 
     if (!calc) return 0;
     if (!calc.hasTax) return 0;
     if (sourceProducts?.length === 0) return 0;
 
-    sourceProducts.forEach(async (sourceProduct) => {
+    sourceProducts.map((sourceProduct) => {
       //let tax = false;
 
       const product = cartRequest.cart.products.find(
-        (p) => p.product === product.SKU
+        (p) => p.product === sourceProduct.sku
       );
-
-      //TODO: need a category lookup
-      // calc.catergories.forEach((category) => {
-      //   if (sourceProduct.categories.includes(category)) {
-      //     tax = true;
-      //     return;
-      //   }
-      // });
-      // if (!tax) return 0;
 
       const productWholesalePrice = sourceProduct.wholesalePrice | 0;
       const productRetailPrice = product.price;
@@ -117,7 +119,6 @@ export class TaxService {
           taxTotals += ((calc.fluidRate * productFluidWeight) / 100) * quantity;
         }
       }
-      console.log(taxTotals);
     });
     return taxTotals;
     //1. loop through all foundStateCalc (state, city, county)

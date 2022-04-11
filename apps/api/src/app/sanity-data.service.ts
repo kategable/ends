@@ -32,7 +32,11 @@ export class SanityDataService {
   }
   async getCalculations( state): Promise<Calculation[]> {
     return await this.sanityClientCredentials.fetch(
-      `*[_type=="calculation" && state =='${state}']`
+      `*[_type=="calculation" && state =='${state}']{
+        city,hasFluidRate,hasRetailRate,hasTax,hasWholesaleRate,
+        retailRate,state,
+        title,year,wholesaleRate,fluidRate, categories[]->{ title}
+      }`
     );
   }
 
@@ -40,7 +44,7 @@ export class SanityDataService {
       return await this.sanityClientCredentials.fetch(
       `*[_type == "product" && sku =='${product}' && clientId=='${clientId}']{
         _id,
-    title, sku, taxable, wholeSalePrice
+    title, sku, taxable, wholeSalePrice, categories[]->{ title}
   }`
     );
   }

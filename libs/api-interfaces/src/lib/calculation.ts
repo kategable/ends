@@ -7,12 +7,16 @@ export interface Calculation {
   catergories: string[];
   city: string;
   county: string;
-  fluidRate: number,
-  hasFluidRate: boolean,
-  hasRetailRate: boolean,
+  fluidRate: number;
+  hasFluidRate: boolean;
+  hasRetailRate: boolean;
   hasTax: boolean;
   hasWholesaleRate: boolean;
-  retailRate: number,
+  retailRate: number;
   state: string;
   wholesaleRate: number;
+  categories?: Category[];
+}
+export interface Category {
+  title: string;
 }

@@ -1,9 +1,10 @@
+import { Category } from './calculation';
 export interface SourceProduct {
   taxable: boolean;
   _createdAt: string;
   _id: string;
-  SKU: string;
-  categories?: string[];
+  sku: string;
+  categories?: Category[];
   title: string;
   vendor: string;
   clientId: string;
