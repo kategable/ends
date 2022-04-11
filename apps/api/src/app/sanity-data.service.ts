@@ -1,13 +1,16 @@
 
-import { Location, SourceProduct, Calculation } from '@ends/api-interfaces';
+import { Location, SourceProduct, Calculation, CartRequest } from '@ends/api-interfaces';
 import { Injectable, Logger } from '@nestjs/common';
+import { SanityDocument } from '@sanity/client';
 import { client } from './service/client';
 
 @Injectable()
 export class SanityDataService {
+
+
   sanityClientCredentials = client;
   logger: Logger;
-
+requestId = '';
   constructor() {
     this.logger = new Logger();
   }
@@ -47,6 +50,31 @@ export class SanityDataService {
     title, sku, taxable, wholeSalePrice, categories[]->{ title}
   }`
     );
+  }
+  async saveCalculateRequest(cartRequest: CartRequest) {
+    const doc = { _type: 'calculateRequest', data: JSON.stringify(cartRequest) } as unknown as SanityDocument;
+      return await client
+        .create(doc)
+        .then((res) => {
+          this.logger.log(`Request was created, document ID is ${res._id}`);
+          this.requestId =  res._id;
+        })
+        .catch((err) => {
+          this.logger.error('Oh no, the update failed: ', err.message);
+        });
+  }
+  async saveRequest(log: string) {
+   await client
+        .patch(`${this.requestId}`)
+        .set({logs: [log]})
+        .commit()
+        .then((res) => {
+          this.logger.log(`Request was updated, document ID is ${res._id}`);
+          return res.id;
+        })
+        .catch((err) => {
+          this.logger.error('Oh no, the update failed: ', err.message);
+        });
   }
   async createLocations(cnt?: number): Promise<number> {
     //this is to load zipcode file

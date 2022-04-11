@@ -10,12 +10,14 @@ export class TaxService {
   }
   async culculate(cartRequest: CartRequest): Promise<number> {
     let tax = 0;
+    await this.dataService.saveCalculateRequest(cartRequest);
     //match address
     const validLocations = await this.dataService.getLocations(
       +cartRequest.shipping.address.zipCode
     );
 
     if (!validLocations?.length) {
+       await this.dataService.saveRequest('no address found');
       throw new NotFoundException('no address found');
     }
     //read calcs for this state
