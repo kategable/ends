@@ -30,58 +30,64 @@ export class TaxService {
     if (foundStateCalcAll.length === 0) {
       return 0;
     }
-    foundStateCalcAll.map(async (calc) => {
-      let isTaxable = false;
-      let calcApplied = false;
+    await Promise.all(
+      foundStateCalcAll.map(async (calc) => {
+        let isTaxable = false;
+        let calcApplied = false;
 
-      if (calc?.city === city) {
-        //calculate tax for each product for city
-        isTaxable = true;
-        calcApplied = true;
-      }
-      calcApplied = calcApplied ? true : calc?.city?.length > 0;
-
-      if (!calcApplied) {
-        if (calc?.county === county && !isTaxable) {
-          //calculate tax for each product for county
+        if (calc?.city === city) {
+          //calculate tax for each product for city
           isTaxable = true;
           calcApplied = true;
         }
-      }
-      calcApplied = calcApplied ? true : calc?.county?.length > 0;
-      if (!calcApplied) {
-        if (calc?.state === state && !isTaxable) {
-          //calculate tax for each product for state
-          isTaxable = true;
-        }
-      }
-      if (isTaxable) {
-        const sourceProducts = [];
-        await Promise.all(
-          cartRequest.cart.products.map(async (cartProduct) => {
-            //let tax = false;
-            const ss = await this.dataService.getSourceProduct(
-              cartProduct.product,
-              cartRequest.clientId
-            );
-            const sourceProduct = ss.at(0);
-            const titles = sourceProduct.categories.map((ca) => ca.title);
+        calcApplied = calcApplied ? true : calc?.city?.length > 0;
 
-            calc.categories.map((category) => {
-              if (titles.includes(category.title)) {
-                sourceProducts.push(sourceProduct);
-              }
-            });
-          })
-        );
-        console.log(cartRequest.cart.products);
-        if (sourceProducts.length > 0) {
-          tax += this.getTax(calc, cartRequest, sourceProducts);
-        } else {
-          this.logger.log('no source products for:', cartRequest.cart.products);
+        if (!calcApplied) {
+          if (calc?.county === county && !isTaxable) {
+            //calculate tax for each product for county
+            isTaxable = true;
+            calcApplied = true;
+          }
         }
-      }
-    });
+        calcApplied = calcApplied ? true : calc?.county?.length > 0;
+        if (!calcApplied) {
+          if (calc?.state === state && !isTaxable) {
+            //calculate tax for each product for state
+            isTaxable = true;
+          }
+        }
+        if (isTaxable) {
+          const sourceProducts = [];
+          await Promise.all(
+            cartRequest.cart.products.map(async (cartProduct) => {
+              //let tax = false;
+              const ss = await this.dataService.getSourceProduct(
+                cartProduct.product,
+                cartRequest.clientId
+              );
+              const sourceProduct = ss.at(0);
+              const titles = sourceProduct.categories.map((ca) => ca.title);
+
+              calc.categories.map((category) => {
+                if (titles.includes(category.title)) {
+                  sourceProducts.push(sourceProduct);
+                }
+              });
+            })
+          );
+          console.log(cartRequest.cart.products);
+          if (sourceProducts.length > 0) {
+            tax += this.getTax(calc, cartRequest, sourceProducts);
+          } else {
+            this.logger.log(
+              'no source products for:',
+              cartRequest.cart.products
+            );
+          }
+        }
+      })
+    );
+    this.logger.log('final', tax);
     return tax;
   }
   getTax(
