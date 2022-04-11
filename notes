@@ -11,3 +11,12 @@ count(*[_type == 'location'])
 
 
 
+{
+  "mutations": [
+    {
+      "delete": {
+        "query": "*[_type == 'calculateRequest' && viewCount < 5]"
+      }
+    }
+  ]
+}

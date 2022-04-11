@@ -1,6 +1,6 @@
-import { client } from './service/client';
+
 import { Injectable, Logger, NotFoundException } from '@nestjs/common';
-import { CartRequest, Calculation, SourceProduct } from '@ends/api-interfaces';
+import { CartRequest, Calculation, SourceProduct , Location} from '@ends/api-interfaces';
 
 import { SanityDataService } from './sanity-data.service';
 @Injectable()
