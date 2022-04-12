@@ -1,6 +1,10 @@
-
 import { Injectable, Logger, NotFoundException } from '@nestjs/common';
-import { CartRequest, Calculation, SourceProduct , Location} from '@ends/api-interfaces';
+import {
+  CartRequest,
+  Calculation,
+  SourceProduct,
+  Location,
+} from '@ends/api-interfaces';
 
 import { SanityDataService } from './sanity-data.service';
 @Injectable()
@@ -20,7 +24,6 @@ export class TaxService {
     );
     await this.zipCheck(validLocations, cartRequest);
 
-
     //read calcs for this state
     const foundStateCalcAll = await this.dataService.getCalculations(
       validLocations.at(0).state
@@ -30,6 +33,7 @@ export class TaxService {
     const state = validLocations.at(0).state;
     const county = validLocations.at(0).county;
 
+    this.checkLocation(foundStateCalcAll);
     if (foundStateCalcAll.length === 0) {
       return this.logAndReturn(0);
     }
@@ -93,17 +97,16 @@ export class TaxService {
     );
     return this.logAndReturn(tax);
   }
-  async zipCheck(validLocations:  Location[], cartRequest: CartRequest) {
-
-   if(validLocations.length === 0)
-    {
+  async zipCheck(validLocations: Location[], cartRequest: CartRequest) {
+    if (validLocations.length === 0) {
       const msg = `no location found for zip: ${cartRequest.shipping.address.zipCode}`;
       await this.dataService.saveRequestLogs(msg);
       throw new NotFoundException(msg);
     }
-    const msg = ` locations found for zip: ${cartRequest.shipping.address.zipCode}  : ${JSON.stringify(validLocations)}`;
+    const msg = ` locations found for zip: ${
+      cartRequest.shipping.address.zipCode
+    }  : ${JSON.stringify(validLocations)}`;
     await this.dataService.saveRequestLogs(msg);
-
   }
 
   private async checkClient(cartRequest: CartRequest) {
@@ -118,13 +121,12 @@ export class TaxService {
       throw new NotFoundException('client is not valid');
     }
     await this.dataService.saveRequestLogs('client is valid');
-
   }
 
   async logAndReturn(tax: number): Promise<number> {
-    await this.dataService.saveRequestLogs(`final tax calculated: ${tax}`);
+    await this.dataService.saveRequestLogs(`final tax calculated: ${tax} (${tax.toFixed(2)})`);
     await this.dataService.saveRequestTotal(tax);
-    return tax;
+    return +tax.toFixed(2);
   }
   getTax(
     calc: Calculation,
@@ -185,5 +187,11 @@ export class TaxService {
     // if hasRetailRate
     // calculation=>product.rate * foundStateCalc.RetailRate
     // add to tax total
+  }
+  async checkLocation(foundStateCalcAll: Calculation[]) {
+    if (foundStateCalcAll.length > 0) {
+      const msg = `Calculation found: ${JSON.stringify(foundStateCalcAll)}`;
+      await this.dataService.saveRequestLogs(msg);
+    }
   }
 }
