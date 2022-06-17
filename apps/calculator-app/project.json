@@ -18,7 +18,10 @@
           "apps/calculator-app/src/favicon.ico",
           "apps/calculator-app/src/assets"
         ],
-        "styles": ["apps/calculator-app/src/styles.scss"],
+        "styles": [
+          "apps/calculator-app/src/themes.scss",
+          "apps/calculator-app/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {

@@ -9,8 +9,8 @@
     "build": "nx build",
     "test": "nx test",
     "heroku-postbuild": "nx build $PROJECT_NAME --prod",
-    "sanity-start":"cd endsdata; sanity start;",
-    "api-start":"nx serve api"
+    "sanity-start": "cd endsdata; sanity start;",
+    "api-start": "nx serve api"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +19,7 @@
     "@angular/compiler": "~13.2.0",
     "@angular/core": "~13.2.0",
     "@angular/forms": "~13.2.0",
+    "@angular/material": "^13.3.9",
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
