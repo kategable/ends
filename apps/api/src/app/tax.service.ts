@@ -79,9 +79,12 @@ export class TaxService {
               }
               const sourceProduct = ss.at(0);
 
-              const titles = sourceProduct.categories.map((ca) => ca.title);
-
+              const titles: string[] = sourceProduct.categories.map(
+                (ca) => ca.title
+              );
+              //TODO: if no categories in calculation then all categories are taxed
               calc.categories.map((category) => {
+                //should select nulls too
                 if (titles.includes(category.title)) {
                   sourceProducts.push(sourceProduct);
                 }
@@ -124,7 +127,9 @@ export class TaxService {
   }
 
   async logAndReturn(tax: number): Promise<number> {
-    await this.dataService.saveRequestLogs(`final tax calculated: ${tax} (${tax.toFixed(2)})`);
+    await this.dataService.saveRequestLogs(
+      `final tax calculated: ${tax} (${tax.toFixed(2)})`
+    );
     await this.dataService.saveRequestTotal(tax);
     return +tax.toFixed(2);
   }
@@ -138,9 +143,14 @@ export class TaxService {
     if (!calc) return 0;
     if (!calc.hasTax) return 0;
     if (sourceProducts?.length === 0) return 0;
-
     sourceProducts.map((sourceProduct) => {
       //let tax = false;
+      if (
+        sourceProduct.categories.every((c) => !c.title?.length) &&
+        calc.categories.some((c) => c.title.length)
+      ) {
+        return 0;
+      }
 
       const product = cartRequest.cart.products.find(
         (p) => p.product === sourceProduct.sku

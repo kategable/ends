@@ -8,7 +8,7 @@ export default {
     { name: 'state', type: 'string', title: 'State' },
     { name: 'city', type: 'string', title: 'City' },
     { name: 'county', type: 'string', title: 'County' },
-    { name: 'hasTax', type: 'boolean', title: 'Apply Excite Tax' },
+    { name: 'hasTax', type: 'boolean', title: 'Apply Excise Tax' },
     { name: 'year', type: 'number', title: 'TAX YEAR - if blank all years will apply' },
     {
       name: 'hasWholesaleRate',
@@ -17,9 +17,11 @@ export default {
     },
     { name: 'wholesaleRate', type: 'number', title: '% Wholesale Rate' },
     { name: 'hasFluidRate', type: 'boolean', title: 'Charge Per Fluid Rate' },
-    { name: 'fluidRate', type: 'number', title: '% Per Fluid Rate' },
+    { name: 'fluidRate', type: 'number', title: '$ Per Fluid Rate' },
     { name: 'hasRetailRate', type: 'boolean', title: 'Charge Retail Rate' },
     { name: 'retailRate', type: 'number', title: '% Retail Rate' },
+    { name: 'hasPerUnitRate', type: 'boolean', title: 'Charge Per Unit Rate' },
+    { name: 'perUnitRate', type: 'number', title: 'Per Unit Rate' },
     {
       name: 'categories',
       title: 'Product types to tax',

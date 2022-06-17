@@ -47,7 +47,7 @@ export class SanityDataService {
 
   async getSourceProduct(product: string, clientId: string) {
     return await this.sanityClientCredentials.fetch(
-      `*[_type == "product" && sku =='${product}' && clientId=='${clientId}']{
+      `*[_type == "product" && sku =='${product}' && clientId=='${clientId}' && taxable==true]{
         _id,
     title, sku, taxable, wholeSalePrice, categories[]->{ title}
   }`
