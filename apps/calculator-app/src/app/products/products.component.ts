@@ -18,9 +18,11 @@ export class ProductsComponent implements AfterViewInit {
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'name'];
   showGrid = true;
-
+  length: number;
   constructor() {
     this.dataSource = new ProductsDataSource();
+    this.length = this.dataSource.data.length;
+
     //this.showGrid = this.dataSource.data.length > 0;
   }
 
