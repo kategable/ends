@@ -1,0 +1,37 @@
+<form #f="ngForm" name="stateForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Shipping City/State</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="City" name="city" />
+            <mat-error> City is <strong>required</strong> </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select
+              placeholder="State"
+              name="stateCode"
+              [(ngModel)]="state"
+              required
+            >
+              <mat-option
+                *ngFor="let state of data$ | async"
+                [value]="state.abbreviation"
+              >
+                {{ state.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="state.length === 0">
+              State is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</form>
