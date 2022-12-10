@@ -8,6 +8,7 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 export interface ProductsItem {
   name: string;
   id: number;
+  wholeSalePrice: number;
 }
 
 // TODO: replace this with real data from your application

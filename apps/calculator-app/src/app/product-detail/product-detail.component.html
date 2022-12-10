@@ -22,6 +22,7 @@
               <mat-option
                 *ngFor="let state of data$ | async"
                 [value]="state.abbreviation"
+                (onSelectionChange)="onStateChange(state)"
               >
                 {{ state.name }}
               </mat-option>
@@ -32,6 +33,29 @@
           </mat-form-field>
         </div>
       </div>
+      <div class="row" *ngIf="stateSelected">
+        <div class="col">Tax data for the state goes here(after selection)</div>
+        <div class="col">
+        <form>
+          <mat-form-field>
+            <input matInput placeholder="Product Name" name="productName" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Product Sku" name="productSku" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Product Price" name="productPrice" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Product Wholesale Price" name="productWhopleSalePrice" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Product Quantity" name="productQuantity" />
+          </mat-form-field>
+          <button mat-raised-button color="primary">Add product</button>
+        </form>
+      </div>
+    </div>
     </mat-card-content>
   </mat-card>
 </form>

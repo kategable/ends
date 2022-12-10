@@ -22,3 +22,9 @@ http://localhost:3334/api/
 
 ## API tests
 nx run api:test
+
+
+
+## Trying to emulate this site for testing the cost calculation:
+https://app.tokenoftrust.com/hq/excise-tax/calculator?utm_campaign=Vape%26eCig&utm_source=email&utm_medium=email&utm_content=tobaccoPlusExpo22_AreYouAttending_robertSearles#
+

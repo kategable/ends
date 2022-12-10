@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { BehaviorSubject, combineLatest, of } from 'rxjs';
+import { State } from '@ends/api-interfaces';
+import { BehaviorSubject, combineLatest, of, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -10,7 +11,8 @@ import { map } from 'rxjs/operators';
 export class ProductDetailComponent {
   state = '';
 
-  states$ = of([
+//todo: ideally this would be a service call
+  states$:Observable<State[]> = of([
     { name: 'Alabama', abbreviation: 'AL' },
     { name: 'Alaska', abbreviation: 'AK' },
     { name: 'American Samoa', abbreviation: 'AS' },
@@ -70,7 +72,7 @@ export class ProductDetailComponent {
     { name: 'West Virginia', abbreviation: 'WV' },
     { name: 'Wisconsin', abbreviation: 'WI' },
     { name: 'Wyoming', abbreviation: 'WY' },
-  ]);
+  ] as State[]);
 
   reloadSubject = new BehaviorSubject<boolean | null>(null);
 
@@ -79,8 +81,14 @@ export class ProductDetailComponent {
       return states;
     })
   );
+  stateSelected: boolean;
 
   onSubmit(): void {
     this.reloadSubject.next(true);
+  }
+  onStateChange(state:State){
+    //call api and get tax for this state
+    console.log(state);
+    this.stateSelected = true;
   }
 }
