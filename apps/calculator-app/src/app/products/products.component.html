@@ -1,4 +1,4 @@
-<div class="mat-elevation-z8" *ngIf="showGrid">
+<div class="mat-elevation-z8" >
   <table mat-table class="full-width-table" matSort aria-label="Elements">
     <!-- Id Column -->
     <ng-container matColumnDef="id">
@@ -12,7 +12,7 @@
       <td mat-cell *matCellDef="let row">{{row.name}}</td>
     </ng-container>
       <!-- Wholesale price Column -->
-      <ng-container matColumnDef="wholePrice">
+      <ng-container matColumnDef="wholeSalePrice">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Wholesale Price</th>
         <td mat-cell *matCellDef="let row">{{row.wholeSalePrice}}</td>
       </ng-container>
@@ -22,7 +22,7 @@
   </table>
 
   <mat-paginator #paginator
-      [length]="length"
+      [length]="length$ | async"
       [pageIndex]="0"
       [pageSize]="10"
       [pageSizeOptions]="[5, 10, 20]"

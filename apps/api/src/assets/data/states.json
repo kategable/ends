@@ -1,9 +1,5 @@
 [
   {
-    "name": "Puerto Rico",
-    "code": "PR"
-  },
-  {
     "name": "Alabama",
     "code": "AL"
   },
@@ -202,5 +198,9 @@
   {
     "name": "Wyoming",
     "code": "WY"
+  },
+  {
+    "name": "Puerto Rico",
+    "code": "PR"
   }
 ]

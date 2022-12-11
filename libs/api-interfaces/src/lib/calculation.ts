@@ -4,6 +4,8 @@ export interface Calculation {
   _rev: string;
   _type: string;
   _updatedAt: string;
+  title:string;
+  description: string;
   catergories: string[];
   city: string;
   county: string;

@@ -14,14 +14,12 @@ import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductsComponent } from './products/products.component';
 import { ShopComponent } from './shop/shop.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NxWelcomeComponent,
     ShopComponent,
     ProductsComponent,
     ProductDetailComponent,
