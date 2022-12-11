@@ -1,4 +1,4 @@
-<form #f="ngForm" name="stateForm" novalidate (ngSubmit)="onSubmit()">
+<form #f="ngForm" name="stateForm" novalidate >
   <mat-card class="shipping-card">
     <mat-card-header>
       <mat-card-title>Shipping City/State</mat-card-title>
@@ -20,14 +20,14 @@
               required
             >
               <mat-option
-                *ngFor="let state of data$ | async"
-                [value]="state.abbreviation"
+                *ngFor="let state of states$ | async"
+                [value]="state.code"
                 (onSelectionChange)="onStateChange(state)"
               >
                 {{ state.name }}
               </mat-option>
             </mat-select>
-            <mat-error *ngIf="state.length === 0">
+            <mat-error *ngIf="!state">
               State is <strong>required</strong>
             </mat-error>
           </mat-form-field>
@@ -35,13 +35,14 @@
       </div>
       <div class="row" *ngIf="stateSelected">
         <div class="col">Tax data for the state goes here(after selection)</div>
-        <div class="col">
-        <form>
+      <div class="col">
+        <div class="row">
+        <form #productForm>
           <mat-form-field>
-            <input matInput placeholder="Product Name" name="productName" />
+            <input [(ngModel)]="model.id" matInput placeholder="Product Sku" name="productSku" />
           </mat-form-field>
-          <mat-form-field>
-            <input matInput placeholder="Product Sku" name="productSku" />
+          <mat-form-field >
+            <input [(ngModel)]="model.name"  matInput placeholder="Product Name" name="productName" />
           </mat-form-field>
           <mat-form-field>
             <input matInput placeholder="Product Price" name="productPrice" />
@@ -52,9 +53,12 @@
           <mat-form-field>
             <input matInput placeholder="Product Quantity" name="productQuantity" />
           </mat-form-field>
-          <button mat-raised-button color="primary">Add product</button>
+          <div>
+          <button (click)="submit()" class="col-auto"mat-raised-button color="primary">Add product</button>
+        </div>
         </form>
       </div>
+    </div>
     </div>
     </mat-card-content>
   </mat-card>

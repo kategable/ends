@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { CartRequest, Message, Location } from '@ends/api-interfaces';
+import { CartRequest, Message, Location, State, Calculation } from '@ends/api-interfaces';
 import { TaxService } from './tax.service';
 import { SanityDataService } from './sanity-data.service';
+import states from '../assets/data/states.json';
 // This import style requires "esModuleInterop", see "side notes"
 @Injectable()
 export class AppService {
@@ -34,5 +35,13 @@ export class AppService {
 
   async getLocations(): Promise<Location[]> {
     return await this.dataService.getLocations(60030);
+  }
+
+  async getTaxDescription(state: string): Promise<Calculation[]> {
+    return await this.dataService.getCalculations(state);
+  }
+
+  getStates(): State[] {
+    return states as State[];
   }
 }

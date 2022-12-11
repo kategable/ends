@@ -39,7 +39,7 @@ export class SanityDataService {
     return await this.sanityClientCredentials.fetch(
       `*[_type=="calculation" && state =='${state}']{
         city,hasFluidRate,hasRetailRate,hasTax,hasWholesaleRate,
-        retailRate,state,
+        retailRate,state,description,
         title,year,wholesaleRate,fluidRate, categories[]->{ title}
       }`
     );
