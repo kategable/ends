@@ -15,6 +15,7 @@ export class ProductDetailComponent {
   reloadSubject = new BehaviorSubject<boolean | null>(null);
   stateSelected = false;
   states$ = this.productService.states$;
+  calculations$ = this.productService.calculations$;
   submit(): void {
     console.log(this.model);
     this.productService.addProducts({ ...this.model });
@@ -23,7 +24,7 @@ export class ProductDetailComponent {
     //call api and get tax for this state
     this.state = state;
     this.stateSelected = true;
-    this.productService.getCalculation(this.state).subscribe((data) => console.log(data));
+    this.productService.loadCalculation(this.state);
 
   }
 }

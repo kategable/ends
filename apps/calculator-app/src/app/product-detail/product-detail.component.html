@@ -1,4 +1,4 @@
-<form #f="ngForm" name="stateForm" novalidate >
+<form #f="ngForm" name="stateForm" novalidate>
   <mat-card class="shipping-card">
     <mat-card-header>
       <mat-card-title>Shipping City/State</mat-card-title>
@@ -34,32 +34,64 @@
         </div>
       </div>
       <div class="row" *ngIf="stateSelected">
-        <div class="col">Tax data for the state goes here(after selection)</div>
-      <div class="col">
-        <div class="row">
-        <form #productForm>
-          <mat-form-field>
-            <input [(ngModel)]="model.id" matInput placeholder="Product Sku" name="productSku" />
-          </mat-form-field>
-          <mat-form-field >
-            <input [(ngModel)]="model.name"  matInput placeholder="Product Name" name="productName" />
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput placeholder="Product Price" name="productPrice" />
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput placeholder="Product Wholesale Price" name="productWhopleSalePrice" />
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput placeholder="Product Quantity" name="productQuantity" />
-          </mat-form-field>
-          <div>
-          <button (click)="submit()" class="col-auto"mat-raised-button color="primary">Add product</button>
+        <div class="col">
+          Tax data for the state goes here(after selection)
+          <pre>{{ calculations$ | async | json }}</pre>
         </div>
-        </form>
+        <div class="col">
+          <div class="row">
+            <form #productForm>
+              <mat-form-field>
+                <input
+                  [(ngModel)]="model.id"
+                  matInput
+                  placeholder="Product Sku"
+                  name="productSku"
+                />
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  [(ngModel)]="model.name"
+                  matInput
+                  placeholder="Product Name"
+                  name="productName"
+                />
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Product Price"
+                  name="productPrice"
+                />
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Product Wholesale Price"
+                  name="productWhopleSalePrice"
+                />
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Product Quantity"
+                  name="productQuantity"
+                />
+              </mat-form-field>
+              <div>
+                <button
+                  (click)="submit()"
+                  class="col-auto"
+                  mat-raised-button
+                  color="primary"
+                >
+                  Add product
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
     </mat-card-content>
   </mat-card>
 </form>
