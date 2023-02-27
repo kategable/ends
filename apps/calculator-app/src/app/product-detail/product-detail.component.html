@@ -36,12 +36,13 @@
       <div class="row" *ngIf="stateSelected">
         <div class="col">
           Tax data for the state goes here(after selection)
-          <pre>{{ calculations$ | async | json }}</pre>
+          <!-- <pre>{{ calculations$ | async | json }}</pre> -->
         </div>
         <div class="col">
           <div class="row">
             <form #productForm>
               <mat-form-field>
+                <mat-label>Product Sku</mat-label>
                 <input
                   [(ngModel)]="model.id"
                   matInput
@@ -50,7 +51,9 @@
                 />
               </mat-form-field>
               <mat-form-field>
+                <mat-label>Product Name</mat-label>
                 <input
+                  type="text"
                   [(ngModel)]="model.name"
                   matInput
                   placeholder="Product Name"
@@ -58,21 +61,30 @@
                 />
               </mat-form-field>
               <mat-form-field>
+                <mat-label>Product Price</mat-label>
                 <input
+                  type="number"
+                  [(ngModel)]="model.price"
                   matInput
                   placeholder="Product Price"
                   name="productPrice"
                 />
               </mat-form-field>
               <mat-form-field>
+                <mat-label>Product Wholesale Price</mat-label>
                 <input
+                  type="number"
+                  [(ngModel)]="model.wholesalePrice"
                   matInput
                   placeholder="Product Wholesale Price"
                   name="productWhopleSalePrice"
                 />
               </mat-form-field>
               <mat-form-field>
+                <mat-label>Product Quantity</mat-label>
                 <input
+                  type="number"
+                  [(ngModel)]="model.quantity"
                   matInput
                   placeholder="Product Quantity"
                   name="productQuantity"

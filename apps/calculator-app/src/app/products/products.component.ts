@@ -3,7 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { map } from 'rxjs';
-import { ProductItem } from '../../../../../libs/api-interfaces/src/lib/product-item';
+import { ProductItem } from '@ends/api-interfaces';
 import { ProductsService } from '../products.service';
 import { ProductsDataSource } from './products-datasource';
 
@@ -18,10 +18,14 @@ export class ProductsComponent implements AfterViewInit {
   @ViewChild(MatTable) table!: MatTable<ProductItem>;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name','wholeSalePrice'];
-  length$ = this.productService.products$.pipe(map((products) => products.length));
-  constructor(private readonly productDataService: ProductsDataSource,
-    private readonly productService: ProductsService) {}
+  displayedColumns = ['id', 'name', 'price', 'wholesalePrice', 'quantity'];
+  length$ = this.productService.products$.pipe(
+    map((products) => products.length)
+  );
+  constructor(
+    private readonly productDataService: ProductsDataSource,
+    private readonly productService: ProductsService
+  ) {}
 
   ngAfterViewInit(): void {
     this.productDataService.sort = this.sort;

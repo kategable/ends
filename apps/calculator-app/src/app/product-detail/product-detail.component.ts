@@ -11,7 +11,7 @@ export class ProductDetailComponent {
   constructor(private readonly productService: ProductsService) {}
 
   state: State ;
-  model: ProductItem = { name: '', id: '' };
+  model: ProductItem = { name: '', id: '', quantity: 1 };
   reloadSubject = new BehaviorSubject<boolean | null>(null);
   stateSelected = false;
   states$ = this.productService.states$;

@@ -1,11 +1,11 @@
-import { ProductsService } from './../products.service';
 import { DataSource } from '@angular/cdk/collections';
+import { Injectable } from '@angular/core';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatSort, Sort } from '@angular/material/sort';
-import { map } from 'rxjs/operators';
-import { Observable, of as observableOf, merge } from 'rxjs';
 import { ProductItem } from '@ends/api-interfaces';
-import { Injectable } from '@angular/core';
+import { merge, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { ProductsService } from './../products.service';
 
 /**
  * Data source for the Products view. This class should
@@ -35,9 +35,9 @@ export class ProductsDataSource extends DataSource<ProductItem> {
       // stream for the data-table to consume.
       return merge(this.data$, this.paginator.page, this.sort.sortChange).pipe(
         map((data: ProductItem[] | PageEvent | Sort, index: number) => {
-          return this.getPagedData(
-            this.getSortedData([...(data as ProductItem[])])
-          );
+          console.log('data', data);
+          const sorted = this.getSortedData([...(data as ProductItem[])]);
+          return this.getPagedData(sorted);
         })
       );
     } else {
